@@ -1,0 +1,37 @@
+version: 1
+spec_id: easy-fs-storage
+kind: leaf
+source_crate: easy-fs
+artifact: lib
+role: easy-fs 的存储层
+inputs:
+  depends_on_specs: []
+  target_arch: [riscv64gc-unknown-none-elf, host-test]
+  features: []
+  env: []
+public_surface:
+  traits: [BlockDevice]
+  types: [EasyFileSystem]
+  functions: []
+  macros: []
+generation_contract:
+  required_modules: [src/block_dev.rs, src/block_cache.rs, src/layout.rs, src/bitmap.rs, src/efs.rs]
+  implementation_order:
+    - 定义 BlockDevice 和 BLOCK_SZ
+    - 实现块缓存和磁盘布局
+    - 实现文件系统 create/open/root_inode
+  invariants:
+    - BLOCK_SZ 固定为 512
+    - create/open 在同一块设备上保留持久状态
+    - 文件系统实例与磁盘布局一致
+  failure_semantics:
+    - 非法 superblock 不能伪装成有效文件系统
+  unspecified:
+    - 当前 panic 型错误未来可替换为更显式错误返回
+validation:
+  unit_tests: [easy-fs/src/tests.rs]
+  build_checks: ["cargo check -p easy-fs --target riscv64gc-unknown-none-elf"]
+  runtime_checks: []
+exclusions:
+  - tests 中的 MockBlockDevice 不是运行时契约的一部分
+

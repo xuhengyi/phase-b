@@ -1,0 +1,12 @@
+[generation]
+max_rounds_base = 8
+max_rounds_chapter = 12
+max_context_chars = 65000
+failure_tail_lines = 220
+
+[coding_cli]
+command = ["codex", "--ask-for-approval", "{approval_policy}", "exec", "-c", "model_reasoning_effort=\"medium\"", "--skip-git-repo-check", "--sandbox", "{sandbox}", "--model", "{model}", "--output-last-message", "{last_message_path}", "-C", "{cwd}", "-"]
+model = "gpt-5-codex"
+sandbox = "danger-full-access"
+approval_policy = "never"
+use_json_stream = false

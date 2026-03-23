@@ -1,0 +1,42 @@
+version: 1
+spec_id: kernel-context
+kind: aggregate
+source_crate: kernel-context
+artifact: lib
+role: 聚合本地上下文与 foreign portal
+inputs:
+  depends_on_specs: [kernel-context-local, kernel-context-foreign]
+  target_arch: [riscv64gc-unknown-none-elf, host-test]
+  features: [foreign]
+  env: []
+public_surface:
+  traits: [SlotKey]
+  types: [LocalContext, PortalCache, ForeignContext, ForeignPortal, MonoForeignPortal, MultislotPortal, TpReg]
+  functions: []
+  macros: []
+generation_contract:
+  required_modules: [src/lib.rs, src/foreign/mod.rs]
+  implementation_order:
+    - 先满足 kernel-context-local
+    - 再满足 kernel-context-foreign
+    - 最后实现统一导出表面
+  invariants:
+    - 统一 crate 表面同时服务本地与 foreign 使用方
+    - 聚合层不重复子能力内部逻辑
+  failure_semantics:
+    - 聚合层不得掩盖子能力的目标架构限制
+  unspecified:
+    - 聚合层不定义额外独立执行语义
+composition:
+  child_specs: [kernel-context-local, kernel-context-foreign]
+  integration_order:
+    - 先准备 LocalContext
+    - 再按需启用 foreign portal
+validation:
+  unit_tests: [kernel-context/src/tests.rs, kernel-context/src/foreign/tests.rs]
+  build_checks:
+    - "cargo check -p kernel-context --target riscv64gc-unknown-none-elf"
+    - "cargo check -p kernel-context --features foreign --target riscv64gc-unknown-none-elf"
+  runtime_checks: []
+exclusions: []
+

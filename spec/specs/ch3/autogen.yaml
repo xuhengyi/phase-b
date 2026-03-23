@@ -1,0 +1,53 @@
+version: 1
+spec_id: ch3
+kind: chapter
+source_crate: ch3
+artifact: bin
+role: 多任务章节内核
+inputs:
+  depends_on_specs: [linker, console, kernel-context-local, syscall-kernel-dispatch, task-manage-core]
+  target_arch: [riscv64gc-unknown-none-elf]
+  features: [coop]
+  env: [APP_ASM, LOG]
+public_surface:
+  traits: []
+  types: []
+  functions: [rust_main]
+  macros: [linker::boot0!]
+generation_contract:
+  required_modules: [build.rs, src/main.rs, src/task.rs]
+  implementation_order:
+    - 接入 ch2 的批处理基础
+    - 定义任务控制块和任务集合
+    - 实现调度循环
+    - 接入时间/让出相关 syscall
+  invariants:
+    - 任务状态变迁保持一致
+    - coop feature 改变调度模式但不改变基本任务模型
+  failure_semantics:
+    - 无可运行任务时不得继续伪造调度
+  unspecified:
+    - 调度公平性未写死
+composition:
+  child_specs: [linker, console, kernel-context-local, syscall-kernel-dispatch, task-manage-core]
+  boot_sequence:
+    - 初始化 console 和 syscall
+    - 装载全部应用为任务
+    - 建立第一个当前任务
+  trap_flow:
+    - 用户态运行
+    - ecall 或 timer/trap
+    - 保存当前上下文
+    - 调度下一个任务
+    - 恢复其上下文
+  integration_order:
+    - ch2 基础
+    - task-manage-core
+    - 调度与时钟接线
+validation:
+  unit_tests: []
+  build_checks: ["APP_ASM=<path> cargo check -p ch3 --target riscv64gc-unknown-none-elf"]
+  runtime_checks: ["cargo qemu --ch 3", "cargo qemu --ch 3 --features coop"]
+exclusions:
+  - 测试或示例中的具体调度顺序不自动升格为统一内核策略
+

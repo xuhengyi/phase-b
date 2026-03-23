@@ -1,0 +1,38 @@
+version: 1
+spec_id: kernel-context-local
+kind: leaf
+source_crate: kernel-context
+artifact: lib
+role: 本地执行上下文与寄存器布局
+inputs:
+  depends_on_specs: []
+  target_arch: [riscv64gc-unknown-none-elf, host-test]
+  features: []
+  env: []
+public_surface:
+  traits: []
+  types: [LocalContext]
+  functions: []
+  macros: []
+generation_contract:
+  required_modules: [src/lib.rs]
+  implementation_order:
+    - 定义 LocalContext 结构与构造器
+    - 实现寄存器访问器和 move_next
+    - 实现受目标架构限制的 execute 路径
+  invariants:
+    - LocalContext 为 repr(C) 风格稳定布局
+    - user/thread/empty 构造器建立约定初值
+    - clone 为深拷贝
+    - move_next 采用包装加法
+  failure_semantics:
+    - 非支持目标上的 execute 不构成正式运行时路径
+  unspecified:
+    - 裸汇编内部指令序列未在 prose spec 中逐条固定
+validation:
+  unit_tests: [kernel-context/src/tests.rs]
+  build_checks: ["cargo check -p kernel-context --target riscv64gc-unknown-none-elf"]
+  runtime_checks: []
+exclusions:
+  - host 上 execute panic 仅用于测试支持
+

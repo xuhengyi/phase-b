@@ -1,0 +1,37 @@
+version: 1
+spec_id: kernel-context-foreign
+kind: leaf
+source_crate: kernel-context
+artifact: lib
+role: foreign portal 与中转布局
+inputs:
+  depends_on_specs: [kernel-context-local]
+  target_arch: [riscv64gc-unknown-none-elf, host-test]
+  features: [foreign]
+  env: []
+public_surface:
+  traits: [SlotKey]
+  types: [PortalCache, ForeignContext, ForeignPortal, MonoForeignPortal, MultislotPortal, TpReg]
+  functions: []
+  macros: []
+generation_contract:
+  required_modules: [src/foreign/mod.rs, src/foreign/multislot_portal.rs]
+  implementation_order:
+    - 定义 PortalCache 与 ForeignContext
+    - 实现 portal 布局和 offset 计算
+    - 实现 foreign execute 接线
+  invariants:
+    - PortalCache 记录 satp/sepc/a0/sstatus/address
+    - MultislotPortal offsets 单调递增
+    - foreign feature 关闭时不暴露该能力
+  failure_semantics:
+    - foreign execute 仅在受支持目标和 feature 下构成正式路径
+  unspecified:
+    - 中转代码拷贝的精确机器码布局未完全形式化
+validation:
+  unit_tests: [kernel-context/src/foreign/tests.rs]
+  build_checks: ["cargo check -p kernel-context --features foreign --target riscv64gc-unknown-none-elf"]
+  runtime_checks: []
+exclusions:
+  - host 上 foreign panic 路径只服务于测试
+

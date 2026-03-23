@@ -1,0 +1,35 @@
+version: 1
+spec_id: task-manage-core
+kind: leaf
+source_crate: task-manage
+artifact: lib
+role: 任务标识与抽象调度接口
+inputs:
+  depends_on_specs: []
+  target_arch: [riscv64gc-unknown-none-elf, host-test]
+  features: []
+  env: []
+public_surface:
+  traits: [Manage, Schedule]
+  types: [ProcId, ThreadId, CoroId]
+  functions: []
+  macros: []
+generation_contract:
+  required_modules: [src/id.rs, src/manager.rs, src/scheduler.rs]
+  implementation_order:
+    - 定义 ID 类型
+    - 定义 Manage trait
+    - 定义 Schedule trait
+  invariants:
+    - ID 可比较可哈希
+    - Schedule 只抽象 add/fetch，不强制具体策略
+  failure_semantics:
+    - fetch 在无任务时返回 None
+  unspecified:
+    - FIFO 只是测试实现行为，不是通用契约
+validation:
+  unit_tests: [task-manage/src/tests.rs]
+  build_checks: ["cargo check -p rcore-task-manage --target riscv64gc-unknown-none-elf"]
+  runtime_checks: []
+exclusions: []
+

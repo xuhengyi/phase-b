@@ -1,0 +1,56 @@
+version: 1
+spec_id: ch4
+kind: chapter
+source_crate: ch4
+artifact: bin
+role: 地址空间与进程章节内核
+inputs:
+  depends_on_specs: [linker, console, kernel-alloc, kernel-vm, kernel-context-local, kernel-context-foreign, syscall-kernel-dispatch]
+  target_arch: [riscv64gc-unknown-none-elf]
+  features: []
+  env: [APP_ASM, LOG]
+public_surface:
+  traits: []
+  types: []
+  functions: [rust_main]
+  macros: [linker::boot0!]
+generation_contract:
+  required_modules: [build.rs, src/main.rs, src/process.rs]
+  implementation_order:
+    - 接入堆分配和地址空间
+    - 实现 ELF 到进程的装载
+    - 接入 foreign portal
+    - 实现进程级 trap/return 流
+  invariants:
+    - 每个进程有独立地址空间
+    - foreign portal 负责跨地址空间中转执行
+    - 用户栈/上下文/ELF 段落位于约定映射位置
+  failure_semantics:
+    - 映射失败或装载失败不得伪造成功进程
+  unspecified:
+    - 更细的页分配失败错误码尚未完全形式化
+composition:
+  child_specs: [linker, console, kernel-alloc, kernel-vm, kernel-context-local, kernel-context-foreign, syscall-kernel-dispatch]
+  boot_sequence:
+    - 初始化 heap
+    - 建立内核地址空间
+    - 装载用户 ELF 进程
+    - 准备 foreign portal
+  trap_flow:
+    - 调度选中进程
+    - 通过 foreign 或 local 上下文切入用户态
+    - trap 返回内核
+    - 处理 syscall/异常
+    - 决定继续或切换
+  integration_order:
+    - kernel-alloc
+    - kernel-vm
+    - kernel-context-local
+    - kernel-context-foreign
+    - syscall-kernel-dispatch
+validation:
+  unit_tests: []
+  build_checks: ["APP_ASM=<path> cargo check -p ch4 --target riscv64gc-unknown-none-elf"]
+  runtime_checks: ["cargo qemu --ch 4"]
+exclusions: []
+

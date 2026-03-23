@@ -1,0 +1,59 @@
+[chapters.ch1]
+command = ["cargo", "qemu", "--ch", "1"]
+timeout_seconds = 60
+required_patterns = ["Hello, world!"]
+forbidden_patterns = ["panicked at", "SystemFailure"]
+
+[chapters.ch2]
+command = ["cargo", "qemu", "--ch", "2"]
+timeout_seconds = 180
+required_patterns = ["Hello, world!", "Test power OK!", "All applications finished. Shutting down..."]
+forbidden_patterns = ["panicked at", "SystemFailure"]
+
+[chapters.ch3]
+command = ["cargo", "qemu", "--ch", "3"]
+timeout_seconds = 240
+required_patterns = ["Hello, world!", "Test power_3 OK!", "Test power_5 OK!", "Test power_7 OK!", "Test sleep OK!"]
+forbidden_patterns = ["panicked at", "SystemFailure"]
+
+[chapters.ch4]
+command = ["cargo", "qemu", "--ch", "4"]
+timeout_seconds = 240
+required_patterns = ["Hello, world!", "Test write_a OK!", "Test write_b OK!", "Test write_c OK!", "Test sleep OK!"]
+forbidden_patterns = ["panicked at", "SystemFailure"]
+
+[chapters.ch5]
+command = ["cargo", "qemu", "--ch", "5"]
+timeout_seconds = 360
+interactive = true
+input_delay_seconds = 3.0
+input_bytes = "00hello_world\n01store_fault\n02power\n03priv_inst\n04priv_csr\n12forktest\n13forktree\n14forktest2\n15matrix\n"
+required_patterns = ["Rust user shell", "Hello, world!", "Test power OK!", "forktest pass.", "forktest2 test passed!", "matrix passed."]
+forbidden_patterns = ["panicked at", "SystemFailure", "memory allocation of 4096 bytes failed", "Application not found", "Error when executing!"]
+
+[chapters.ch6]
+command = ["cargo", "qemu", "--ch", "6"]
+timeout_seconds = 420
+interactive = true
+input_delay_seconds = 3.0
+input_bytes = "00hello_world\n01store_fault\n02power\n03priv_inst\n04priv_csr\n12forktest\n13forktree\n14forktest2\n15matrix\nfiletest_simple\ncat_filea\n"
+required_patterns = ["Rust user shell", "file_test passed!", "Hello, world!", "matrix passed."]
+forbidden_patterns = ["panicked at", "SystemFailure", "Application not found", "Error when executing!"]
+
+[chapters.ch7]
+command = ["cargo", "qemu", "--ch", "7"]
+timeout_seconds = 480
+interactive = true
+input_delay_seconds = 3.0
+input_bytes = "00hello_world\n01store_fault\n02power\n03priv_inst\n04priv_csr\n12forktest\n13forktree\n14forktest2\n15matrix\nfiletest_simple\ncat_filea\nsig_simple\nsig_simple2\nsig_ctrlc\n\nsig_tests\n"
+required_patterns = ["Rust user shell", "user_sig_test succsess", "sig_ctrlc: Done", "ALL TESTS PASSED"]
+forbidden_patterns = ["panicked at", "SystemFailure", "Application not found", "Error when executing!"]
+
+[chapters.ch8]
+command = ["cargo", "qemu", "--ch", "8"]
+timeout_seconds = 600
+interactive = true
+input_delay_seconds = 3.0
+input_bytes = "00hello_world\n01store_fault\n02power\n03priv_inst\n04priv_csr\n12forktest\n13forktree\n14forktest2\n15matrix\nfiletest_simple\ncat_filea\nsig_simple\nsig_simple2\nsig_ctrlc\n\nsig_tests\nthreads\nthreads_arg\nmpsc_sem\nsync_sem\nrace_adder_mutex_blocking\ntest_condvar\n"
+required_patterns = ["Rust user shell", "ALL TESTS PASSED", "main thread exited.", "mpsc_sem passed!", "sync_sem passed!", "test_condvar passed!", "time cost is "]
+forbidden_patterns = ["panicked at", "SystemFailure", "Application not found", "Error when executing!"]

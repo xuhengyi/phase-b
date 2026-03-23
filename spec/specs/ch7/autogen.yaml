@@ -1,0 +1,52 @@
+version: 1
+spec_id: ch7
+kind: chapter
+source_crate: ch7
+artifact: bin
+role: 信号章节内核
+inputs:
+  depends_on_specs: [linker, console, kernel-alloc, kernel-vm, kernel-context, task-manage-relations, easy-fs, signal, signal-impl, syscall-kernel-dispatch]
+  target_arch: [riscv64gc-unknown-none-elf]
+  features: []
+  env: [APP_ASM, LOG]
+public_surface:
+  traits: []
+  types: []
+  functions: [rust_main]
+  macros: [linker::boot0!]
+generation_contract:
+  required_modules: [build.rs, src/main.rs, src/process.rs, src/processor.rs, src/fs.rs, src/virtio_block.rs]
+  implementation_order:
+    - 在 ch6 基础上接入 signal 与 signal-impl
+    - 为进程对象加入信号状态
+    - 在返回用户态前插入信号处理检查
+  invariants:
+    - 每个进程维护独立信号状态
+    - 信号相关 syscall 更新当前进程信号状态
+    - 用户态返回前必须检查待处理信号
+  failure_semantics:
+    - 非法信号操作不得污染其他进程状态
+  unspecified:
+    - 更细 trap 优先级与错误码仍未完全形式化
+composition:
+  child_specs: [easy-fs, signal, signal-impl, syscall-kernel-dispatch]
+  boot_sequence:
+    - 继承 ch6 启动序列
+    - 为进程初始化信号子系统
+    - 注册信号相关 syscall 服务
+  trap_flow:
+    - trap 返回当前进程
+    - 分发 syscall 或异常
+    - 返回用户态前检查信号
+    - 必要时切换到 handler 或暂停/终止
+  integration_order:
+    - ch6 基础
+    - signal
+    - signal-impl
+    - ch7 process/processor glue
+validation:
+  unit_tests: []
+  build_checks: ["APP_ASM=<path> cargo check -p ch7 --target riscv64gc-unknown-none-elf"]
+  runtime_checks: ["cargo qemu --ch 7"]
+exclusions: []
+

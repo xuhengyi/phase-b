@@ -1,0 +1,38 @@
+version: 1
+spec_id: task-manage-relations
+kind: leaf
+source_crate: task-manage
+artifact: lib
+role: 进程与线程关系管理层
+inputs:
+  depends_on_specs: [task-manage-core]
+  target_arch: [riscv64gc-unknown-none-elf, host-test]
+  features: [proc, thread]
+  env: []
+public_surface:
+  traits: []
+  types: [PManager, ProcRel, ProcThreadRel, PThreadManager]
+  functions: []
+  macros: []
+generation_contract:
+  required_modules: [src/proc_rel.rs, src/proc_thread_rel.rs, src/thread_manager.rs]
+  implementation_order:
+    - 实现 proc 关系管理
+    - 实现 proc-thread 关系管理
+    - 实现 PThreadManager glue
+  invariants:
+    - 关系结构保留子进程和线程成员关系
+    - wait 接口在目标已退出后可返回退出结果
+  failure_semantics:
+    - 等待不存在目标时不得伪造已退出结果
+  unspecified:
+    - 当前 -2/-1 哨兵编码未固化为稳定公共契约
+validation:
+  unit_tests: [task-manage/src/tests.rs]
+  build_checks:
+    - "cargo check -p rcore-task-manage --features proc --target riscv64gc-unknown-none-elf"
+    - "cargo check -p rcore-task-manage --features 'proc thread' --target riscv64gc-unknown-none-elf"
+  runtime_checks: []
+exclusions:
+  - 测试中的具体哨兵值编码不自动升级为最终公共接口
+

@@ -1,0 +1,40 @@
+version: 1
+spec_id: easy-fs
+kind: aggregate
+source_crate: easy-fs
+artifact: lib
+role: 聚合 easy-fs 的存储层与 VFS 层
+inputs:
+  depends_on_specs: [easy-fs-storage, easy-fs-vfs]
+  target_arch: [riscv64gc-unknown-none-elf, host-test]
+  features: []
+  env: []
+public_surface:
+  traits: [BlockDevice]
+  types: [EasyFileSystem, Inode, File, FileHandle, OpenFlags, FSManager, DiskInodeType]
+  functions: []
+  macros: []
+generation_contract:
+  required_modules: [src/lib.rs]
+  implementation_order:
+    - 先满足 easy-fs-storage
+    - 再满足 easy-fs-vfs
+    - 最后实现 lib.rs 的统一导出表面
+  invariants:
+    - 聚合层不重复子能力内部逻辑
+    - 统一 crate 表面保持可被章节内核直接使用
+  failure_semantics:
+    - 聚合层不得屏蔽子能力的失败语义
+  unspecified:
+    - 聚合层不定义额外的独立运行时语义
+composition:
+  child_specs: [easy-fs-storage, easy-fs-vfs]
+  integration_order:
+    - 先初始化块设备与文件系统实例
+    - 再接入 inode 和文件句柄层
+validation:
+  unit_tests: [easy-fs/src/tests.rs]
+  build_checks: ["cargo check -p easy-fs --target riscv64gc-unknown-none-elf"]
+  runtime_checks: []
+exclusions: []
+

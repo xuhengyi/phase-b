@@ -1,0 +1,49 @@
+version: 1
+spec_id: ch5
+kind: chapter
+source_crate: ch5
+artifact: bin
+role: 进程管理章节内核
+inputs:
+  depends_on_specs: [linker, console, kernel-alloc, kernel-vm, kernel-context, task-manage-relations, syscall-kernel-dispatch]
+  target_arch: [riscv64gc-unknown-none-elf]
+  features: []
+  env: [APP_ASM, LOG]
+public_surface:
+  traits: []
+  types: []
+  functions: [rust_main]
+  macros: [linker::boot0!]
+generation_contract:
+  required_modules: [build.rs, src/main.rs, src/process.rs, src/processor.rs]
+  implementation_order:
+    - 在 ch4 基础上接入进程管理器
+    - 定义父子关系和当前进程处理器
+    - 实现 fork/exec/wait 相关路径
+  invariants:
+    - 进程关系结构与地址空间/执行流保持一致
+    - fork/exec 不破坏当前任务管理状态
+  failure_semantics:
+    - 等待不存在目标时不得伪造退出结果
+  unspecified:
+    - 更细 wait 错误码仍未完全形式化
+composition:
+  child_specs: [kernel-alloc, kernel-vm, kernel-context, task-manage-relations, syscall-kernel-dispatch]
+  boot_sequence:
+    - 初始化内核基础设施
+    - 创建 initproc
+    - 建立进程管理器和处理器状态
+  trap_flow:
+    - trap 返回当前进程
+    - 分发 syscall
+    - 根据 fork/exec/wait/exit 更新进程管理器
+  integration_order:
+    - ch4 基础
+    - task-manage-relations
+    - processor glue
+validation:
+  unit_tests: []
+  build_checks: ["APP_ASM=<path> cargo check -p ch5 --target riscv64gc-unknown-none-elf"]
+  runtime_checks: ["cargo qemu --ch 5"]
+exclusions: []
+

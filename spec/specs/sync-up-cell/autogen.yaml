@@ -1,0 +1,37 @@
+version: 1
+spec_id: sync-up-cell
+kind: leaf
+source_crate: sync
+artifact: lib
+role: 单处理器中断屏蔽独占访问单元
+inputs:
+  depends_on_specs: []
+  target_arch: [riscv64gc-unknown-none-elf, host-test]
+  features: []
+  env: []
+public_surface:
+  traits: []
+  types: [UPIntrFreeCell, UPIntrRefMut]
+  functions: []
+  macros: []
+generation_contract:
+  required_modules: [src/up.rs]
+  implementation_order:
+    - 定义中断屏蔽状态
+    - 实现 UPIntrFreeCell 和 guard 类型
+    - 实现嵌套/独占借用控制
+  invariants:
+    - 独占会话修改在结束后可见
+    - 重叠独占借用被拒绝
+    - 单处理器中断屏蔽语义保持一致
+  failure_semantics:
+    - 重复独占借用不得成功
+  unspecified:
+    - host 测试上的中断开关 stub 不构成正式语义
+validation:
+  unit_tests: [sync/src/tests.rs]
+  build_checks: ["cargo check -p sync --target riscv64gc-unknown-none-elf"]
+  runtime_checks: []
+exclusions:
+  - 非 RISC-V 目标上的开关中断实现仅用于测试
+

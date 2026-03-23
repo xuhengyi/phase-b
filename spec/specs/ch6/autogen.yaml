@@ -1,0 +1,51 @@
+version: 1
+spec_id: ch6
+kind: chapter
+source_crate: ch6
+artifact: bin
+role: 文件系统章节内核
+inputs:
+  depends_on_specs: [linker, console, kernel-alloc, kernel-vm, kernel-context, task-manage-relations, easy-fs, syscall-kernel-dispatch]
+  target_arch: [riscv64gc-unknown-none-elf]
+  features: []
+  env: [APP_ASM, LOG]
+public_surface:
+  traits: []
+  types: []
+  functions: [rust_main]
+  macros: [linker::boot0!]
+generation_contract:
+  required_modules: [build.rs, src/main.rs, src/process.rs, src/processor.rs, src/fs.rs, src/virtio_block.rs]
+  implementation_order:
+    - 在 ch5 基础上接入块设备
+    - 初始化 easy-fs
+    - 用文件系统装载 initproc
+    - 接入文件相关 syscall
+  invariants:
+    - 文件系统实例与块设备映射一致
+    - 进程文件描述符状态与 easy-fs 文件句柄保持一致
+  failure_semantics:
+    - 文件不存在或装载失败不得伪造成功进程
+  unspecified:
+    - 更细文件错误码仍未完全形式化
+composition:
+  child_specs: [kernel-alloc, kernel-vm, kernel-context, task-manage-relations, easy-fs, syscall-kernel-dispatch]
+  boot_sequence:
+    - 初始化内存和进程基础设施
+    - 初始化 virtio block
+    - 打开 easy-fs
+    - 从文件系统加载 initproc
+  trap_flow:
+    - trap 返回当前进程
+    - 分发 syscall
+    - 文件相关 syscall 进入 fs glue
+  integration_order:
+    - ch5 基础
+    - easy-fs
+    - fs.rs glue
+validation:
+  unit_tests: []
+  build_checks: ["APP_ASM=<path> cargo check -p ch6 --target riscv64gc-unknown-none-elf"]
+  runtime_checks: ["cargo qemu --ch 6"]
+exclusions: []
+

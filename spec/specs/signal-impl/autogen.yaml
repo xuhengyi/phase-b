@@ -1,0 +1,38 @@
+version: 1
+spec_id: signal-impl
+kind: leaf
+source_crate: signal-impl
+artifact: lib
+role: 信号状态机实现
+inputs:
+  depends_on_specs: [signal, signal-defs, kernel-context-local]
+  target_arch: [riscv64gc-unknown-none-elf, host-test]
+  features: []
+  env: []
+public_surface:
+  traits: []
+  types: [SignalImpl, HandlingSignal]
+  functions: []
+  macros: []
+generation_contract:
+  required_modules: [src/lib.rs, src/default_action.rs, src/signal_set.rs]
+  implementation_order:
+    - 定义 signal_set 位操作
+    - 定义默认动作映射
+    - 实现 SignalImpl 状态机和 Signal trait
+  invariants:
+    - fork 继承动作和 mask 但不继承待处理信号
+    - clear 恢复默认动作
+    - 默认忽略与默认终止动作可区分
+    - SIGSTOP 后可被 SIGCONT 恢复
+    - sig_return 恢复进入 handler 之前的上下文
+  failure_semantics:
+    - 无效 sigreturn 返回 false
+  unspecified:
+    - bitset 的内部表示可以变化，但外部语义必须保持
+validation:
+  unit_tests: [signal-impl/src/tests.rs]
+  build_checks: ["cargo check -p signal-impl --target riscv64gc-unknown-none-elf"]
+  runtime_checks: []
+exclusions: []
+

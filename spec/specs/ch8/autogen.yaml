@@ -1,0 +1,51 @@
+version: 1
+spec_id: ch8
+kind: chapter
+source_crate: ch8
+artifact: bin
+role: 线程与同步章节内核
+inputs:
+  depends_on_specs: [linker, console, kernel-alloc, kernel-vm, kernel-context, task-manage, easy-fs, signal, signal-impl, sync, syscall-kernel-dispatch]
+  target_arch: [riscv64gc-unknown-none-elf]
+  features: []
+  env: [APP_ASM, LOG]
+public_surface:
+  traits: []
+  types: []
+  functions: [rust_main]
+  macros: [linker::boot0!]
+generation_contract:
+  required_modules: [build.rs, src/main.rs, src/process.rs, src/processor.rs, src/fs.rs, src/virtio_block.rs]
+  implementation_order:
+    - 在 ch7 基础上接入线程管理和同步 syscall
+    - 把线程加入进程模型
+    - 接入 mutex/condvar/semaphore 相关服务
+  invariants:
+    - 多线程进程共享地址空间和进程级资源
+    - 线程同步语义建立在 sync capability 之上
+    - 线程化后仍保持文件与信号语义一致
+  failure_semantics:
+    - 线程等待不存在目标时不得伪造退出结果
+  unspecified:
+    - 更细线程调度公平性和对象回收策略仍未完全形式化
+composition:
+  child_specs: [task-manage, sync, signal, signal-impl, easy-fs, syscall-kernel-dispatch]
+  boot_sequence:
+    - 继承 ch7 启动序列
+    - 初始化线程管理器
+    - 注册线程与同步相关 syscall 服务
+  trap_flow:
+    - trap 返回当前线程/进程
+    - 分发 syscall
+    - 线程相关 syscall 更新线程关系层
+    - 同步对象阻塞/唤醒路径与调度器联动
+  integration_order:
+    - ch7 基础
+    - task-manage
+    - sync
+    - ch8 process/processor glue
+validation:
+  unit_tests: []
+  build_checks: ["APP_ASM=<path> cargo check -p ch8 --target riscv64gc-unknown-none-elf"]
+  runtime_checks: ["cargo qemu --ch 8"]
+exclusions: []

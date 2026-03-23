@@ -1,0 +1,40 @@
+version: 1
+spec_id: sync
+kind: aggregate
+source_crate: sync
+artifact: lib
+role: 聚合单处理器同步原语
+inputs:
+  depends_on_specs: [sync-up-cell, sync-blocking-primitives]
+  target_arch: [riscv64gc-unknown-none-elf, host-test]
+  features: []
+  env: []
+public_surface:
+  traits: [Mutex]
+  types: [UPIntrFreeCell, UPIntrRefMut, MutexBlocking, Condvar, Semaphore]
+  functions: []
+  macros: []
+generation_contract:
+  required_modules: [src/lib.rs]
+  implementation_order:
+    - 先满足 sync-up-cell
+    - 再满足 sync-blocking-primitives
+    - 最后实现统一导出表面
+  invariants:
+    - 聚合层继续提供统一 crate 表面
+    - 聚合层不重复子能力内部逻辑
+  failure_semantics:
+    - 聚合层不得改变子能力阻塞/唤醒语义
+  unspecified:
+    - 聚合层无独立附加行为
+composition:
+  child_specs: [sync-up-cell, sync-blocking-primitives]
+  integration_order:
+    - 先准备临界区保护单元
+    - 再接入阻塞同步对象
+validation:
+  unit_tests: [sync/src/tests.rs]
+  build_checks: ["cargo check -p sync --target riscv64gc-unknown-none-elf"]
+  runtime_checks: []
+exclusions: []
+

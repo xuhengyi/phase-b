@@ -1,0 +1,36 @@
+version: 1
+spec_id: signal-defs
+kind: leaf
+source_crate: signal-defs
+artifact: lib
+role: 信号编号与动作定义
+inputs:
+  depends_on_specs: []
+  target_arch: [riscv64gc-unknown-none-elf, host-test]
+  features: []
+  env: []
+public_surface:
+  traits: []
+  types: [SignalNo, SignalAction]
+  functions: []
+  macros: []
+generation_contract:
+  required_modules: [src/lib.rs]
+  implementation_order:
+    - 定义 SignalNo 枚举和 MAX_SIG
+    - 定义 SignalAction 结构体
+    - 实现从整数到 SignalNo 的转换
+  invariants:
+    - MAX_SIG 为传统信号上界
+    - 实时信号仍有稳定枚举值
+    - 越界编号转换为 SignalNo::ERR
+  failure_semantics:
+    - 非法输入统一映射为 ERR
+  unspecified:
+    - 无
+validation:
+  unit_tests: [signal-defs/src/tests.rs]
+  build_checks: ["cargo check -p signal-defs --target riscv64gc-unknown-none-elf"]
+  runtime_checks: []
+exclusions: []
+

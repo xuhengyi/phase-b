@@ -1,0 +1,36 @@
+version: 1
+spec_id: kernel-vm
+kind: leaf
+source_crate: kernel-vm
+artifact: lib
+role: 地址空间与页映射抽象
+inputs:
+  depends_on_specs: []
+  target_arch: [riscv64gc-unknown-none-elf, host-test]
+  features: []
+  env: []
+public_surface:
+  traits: [PageManager]
+  types: [AddressSpace]
+  functions: []
+  macros: []
+generation_contract:
+  required_modules: [src/lib.rs, src/space/mod.rs, src/space/mapper.rs]
+  implementation_order:
+    - 定义 PageManager trait
+    - 定义 AddressSpace 和 area 管理
+    - 实现 map/map_extern/translate/cloneself
+  invariants:
+    - translate 受映射权限约束
+    - map_extern 共享底层页内容
+    - cloneself 生成独立副本
+  failure_semantics:
+    - 不存在映射或权限不匹配时 translate 返回 None
+  unspecified:
+    - 资源不足时的错误编码尚未形式化
+validation:
+  unit_tests: [kernel-vm/src/tests.rs]
+  build_checks: ["cargo check -p kernel-vm --target riscv64gc-unknown-none-elf"]
+  runtime_checks: []
+exclusions: []
+

@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+
+artifacts/*
+!artifacts/README.md
+
+trial-workspaces/*
+!trial-workspaces/README.md

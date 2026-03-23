@@ -1,0 +1,185 @@
+order = [
+  "linker",
+  "rcore-console",
+  "signal-defs",
+  "kernel-context",
+  "signal",
+  "signal-impl",
+  "rcore-task-manage",
+  "sync",
+  "kernel-vm",
+  "kernel-alloc",
+  "easy-fs",
+  "syscall",
+  "ch1",
+  "ch2",
+  "ch3",
+  "ch4",
+  "ch5",
+  "ch6",
+  "ch7",
+  "ch8",
+]
+
+[crates.linker]
+kind = "base"
+dir = "linker"
+package = "linker"
+spec = "linker"
+check = ["cargo", "check", "-p", "linker"]
+tests = [["cargo", "test", "-p", "linker"]]
+
+[crates."rcore-console"]
+kind = "base"
+dir = "console"
+package = "rcore-console"
+spec = "console"
+check = ["cargo", "check", "-p", "rcore-console"]
+tests = [["cargo", "test", "-p", "rcore-console"]]
+
+[crates."signal-defs"]
+kind = "base"
+dir = "signal-defs"
+package = "signal-defs"
+spec = "signal-defs"
+check = ["cargo", "check", "-p", "signal-defs"]
+tests = [["cargo", "test", "-p", "signal-defs"]]
+
+[crates."kernel-context"]
+kind = "base"
+dir = "kernel-context"
+package = "kernel-context"
+spec = "kernel-context"
+check = ["cargo", "check", "-p", "kernel-context", "--features", "foreign"]
+tests = [["cargo", "test", "-p", "kernel-context", "--features", "foreign"]]
+
+[crates.signal]
+kind = "base"
+dir = "signal"
+package = "signal"
+spec = "signal"
+check = ["cargo", "check", "-p", "signal"]
+tests = [["cargo", "test", "-p", "signal"]]
+
+[crates."signal-impl"]
+kind = "base"
+dir = "signal-impl"
+package = "signal-impl"
+spec = "signal-impl"
+check = ["cargo", "check", "-p", "signal-impl"]
+tests = [["cargo", "test", "-p", "signal-impl"]]
+
+[crates."rcore-task-manage"]
+kind = "base"
+dir = "task-manage"
+package = "rcore-task-manage"
+spec = "task-manage"
+check = ["cargo", "check", "-p", "rcore-task-manage", "--features", "proc thread"]
+tests = [["cargo", "test", "-p", "rcore-task-manage", "--features", "proc thread"]]
+
+[crates.sync]
+kind = "base"
+dir = "sync"
+package = "sync"
+spec = "sync"
+check = ["cargo", "check", "-p", "sync"]
+tests = [["cargo", "test", "-p", "sync"]]
+
+[crates."kernel-vm"]
+kind = "base"
+dir = "kernel-vm"
+package = "kernel-vm"
+spec = "kernel-vm"
+check = ["cargo", "check", "-p", "kernel-vm"]
+tests = [["cargo", "test", "-p", "kernel-vm"]]
+
+[crates."kernel-alloc"]
+kind = "base"
+dir = "kernel-alloc"
+package = "kernel-alloc"
+spec = "kernel-alloc"
+check = ["cargo", "check", "-p", "kernel-alloc"]
+tests = [["cargo", "test", "-p", "kernel-alloc"]]
+
+[crates."easy-fs"]
+kind = "base"
+dir = "easy-fs"
+package = "easy-fs"
+spec = "easy-fs"
+check = ["cargo", "check", "-p", "easy-fs"]
+tests = [["cargo", "test", "-p", "easy-fs"]]
+
+[crates.syscall]
+kind = "base"
+dir = "syscall"
+package = "syscall"
+spec = "syscall"
+check = ["cargo", "check", "-p", "syscall", "--features", "user"]
+tests = [
+  ["cargo", "test", "-p", "syscall", "--features", "user"],
+  ["cargo", "test", "-p", "syscall", "--features", "kernel"],
+]
+
+[crates.ch1]
+kind = "chapter"
+dir = "ch1"
+package = "ch1"
+spec = "ch1"
+check = ["cargo", "check", "-p", "ch1", "--target", "riscv64gc-unknown-none-elf"]
+chapter = "ch1"
+
+[crates.ch2]
+kind = "chapter"
+dir = "ch2"
+package = "ch2"
+spec = "ch2"
+check = ["cargo", "check", "-p", "ch2", "--target", "riscv64gc-unknown-none-elf"]
+chapter = "ch2"
+
+[crates.ch3]
+kind = "chapter"
+dir = "ch3"
+package = "ch3"
+spec = "ch3"
+check = ["cargo", "check", "-p", "ch3", "--target", "riscv64gc-unknown-none-elf"]
+chapter = "ch3"
+
+[crates.ch4]
+kind = "chapter"
+dir = "ch4"
+package = "ch4"
+spec = "ch4"
+check = ["cargo", "check", "-p", "ch4", "--target", "riscv64gc-unknown-none-elf"]
+chapter = "ch4"
+
+[crates.ch5]
+kind = "chapter"
+dir = "ch5"
+package = "ch5"
+spec = "ch5"
+check = ["cargo", "check", "-p", "ch5", "--target", "riscv64gc-unknown-none-elf"]
+chapter = "ch5"
+
+[crates.ch6]
+kind = "chapter"
+dir = "ch6"
+package = "ch6"
+spec = "ch6"
+check = ["cargo", "check", "-p", "ch6", "--target", "riscv64gc-unknown-none-elf"]
+chapter = "ch6"
+
+[crates.ch7]
+kind = "chapter"
+dir = "ch7"
+package = "ch7"
+spec = "ch7"
+check = ["cargo", "check", "-p", "ch7", "--target", "riscv64gc-unknown-none-elf"]
+chapter = "ch7"
+
+[crates.ch8]
+kind = "chapter"
+dir = "ch8"
+package = "ch8"
+spec = "ch8"
+check = ["cargo", "check", "-p", "ch8", "--target", "riscv64gc-unknown-none-elf"]
+chapter = "ch8"

@@ -1,0 +1,43 @@
+version: 1
+spec_id: syscall
+kind: aggregate
+source_crate: syscall
+artifact: lib
+role: 聚合 ABI、用户态封装与内核态分发
+inputs:
+  depends_on_specs: [syscall-abi, syscall-user-api, syscall-kernel-dispatch]
+  target_arch: [riscv64gc-unknown-none-elf, host-test]
+  features: [user, kernel]
+  env: []
+public_surface:
+  traits: [Process, IO, Memory, Scheduling, Clock, Signal, Thread, SyncMutex]
+  types: [SyscallId, Caller, SyscallResult, ClockId, TimeSpec]
+  functions: [handle]
+  macros: []
+generation_contract:
+  required_modules: [src/lib.rs]
+  implementation_order:
+    - 先满足 syscall-abi
+    - 再满足 syscall-user-api 与 syscall-kernel-dispatch
+    - 最后实现统一导出表面
+  invariants:
+    - 用户态与内核态共享同一 ABI 编号空间
+    - 聚合层保持统一 crate 入口
+  failure_semantics:
+    - 聚合层不得掩盖子能力的错误语义
+  unspecified:
+    - 聚合层无独立附加运行时行为
+composition:
+  child_specs: [syscall-abi, syscall-user-api, syscall-kernel-dispatch]
+  integration_order:
+    - 先定义 ABI
+    - 再分别接入 user/kernel 表面
+validation:
+  unit_tests: [syscall/src/tests.rs]
+  build_checks:
+    - "cargo check -p syscall --target riscv64gc-unknown-none-elf"
+    - "cargo check -p syscall --features user --target riscv64gc-unknown-none-elf"
+    - "cargo check -p syscall --features kernel --target riscv64gc-unknown-none-elf"
+  runtime_checks: []
+exclusions: []
+

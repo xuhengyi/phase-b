@@ -1,0 +1,30 @@
+[paths]
+candidate_template = "candidate-template"
+trial_root = "trial-workspaces"
+spec_root = "spec/specs"
+spec_search_roots = ["spec/specs"]
+oracle_root = "oracle-tests"
+artifacts_root = "artifacts"
+
+[api]
+base_url = "https://api.openai.com/v1"
+endpoint = "chat_completions"
+model = "gpt-4.1"
+api_key_env = "OPENAI_API_KEY"
+timeout_seconds = 180
+temperature = 0.1
+
+[generation]
+max_rounds_base = 6
+max_rounds_chapter = 8
+max_context_chars = 50000
+max_output_chars = 60000
+failure_tail_lines = 160
+allow_backtrack = true
+
+[coding_cli]
+command = ["codex", "--ask-for-approval", "{approval_policy}", "exec", "-c", "model_reasoning_effort=\"medium\"", "--skip-git-repo-check", "--sandbox", "{sandbox}", "--model", "{model}", "--output-last-message", "{last_message_path}", "-C", "{cwd}", "-"]
+model = "gpt-5-codex"
+sandbox = "danger-full-access"
+approval_policy = "never"
+use_json_stream = false

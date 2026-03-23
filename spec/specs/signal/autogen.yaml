@@ -1,0 +1,36 @@
+version: 1
+spec_id: signal
+kind: leaf
+source_crate: signal
+artifact: lib
+role: 信号接口层
+inputs:
+  depends_on_specs: [signal-defs, kernel-context-local]
+  target_arch: [riscv64gc-unknown-none-elf, host-test]
+  features: []
+  env: []
+public_surface:
+  traits: [Signal]
+  types: [SignalResult, SignalAction, SignalNo]
+  functions: []
+  macros: []
+generation_contract:
+  required_modules: [src/lib.rs, src/signal_result.rs]
+  implementation_order:
+    - 重导出 signal-defs 中的共享类型
+    - 定义 Signal trait
+    - 定义 SignalResult 分支
+  invariants:
+    - from_fork 继承掩码和处理动作
+    - update_mask 返回旧 mask
+    - SignalResult 能表达继续、忽略、处理、终止、暂停
+  failure_semantics:
+    - sig_return 失败时由实现层决定 false 分支
+  unspecified:
+    - trait 各方法的内部状态组织不在本层写死
+validation:
+  unit_tests: [signal/src/tests.rs]
+  build_checks: ["cargo check -p signal --target riscv64gc-unknown-none-elf"]
+  runtime_checks: []
+exclusions: []
+

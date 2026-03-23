@@ -1,0 +1,57 @@
+version: 1
+spec_id: ch2
+kind: chapter
+source_crate: ch2
+artifact: bin
+role: 批处理章节内核
+inputs:
+  depends_on_specs: [linker, console, kernel-context-local, syscall-kernel-dispatch]
+  target_arch: [riscv64gc-unknown-none-elf]
+  features: []
+  env: [APP_ASM, LOG]
+public_surface:
+  traits: []
+  types: []
+  functions: [rust_main]
+  macros: [linker::boot0!]
+generation_contract:
+  required_modules: [build.rs, src/main.rs]
+  implementation_order:
+    - 写出 linker.ld 并接入 APP_ASM
+    - 初始化控制台和 syscall 服务
+    - 枚举内嵌应用并创建用户上下文
+    - 进入批处理执行循环
+  invariants:
+    - AppMeta/AppIterator 枚举顺序决定批处理顺序
+    - 用户应用通过 LocalContext 进入执行
+    - syscall 陷入通过 kernel dispatch 处理
+  failure_semantics:
+    - 缺失 APP_ASM 时构建不得伪造成功
+  unspecified:
+    - 除系统调用外的异常细分处理仍较粗
+composition:
+  child_specs: [linker, console, kernel-context-local, syscall-kernel-dispatch]
+  boot_sequence:
+    - 生成 linker.ld
+    - 引入 APP_ASM
+    - 初始化 console
+    - 初始化 syscall dispatch
+    - 装载第一个用户应用
+  trap_flow:
+    - 用户态运行
+    - 发生 ecall 或异常
+    - 回到内核 trap 处理
+    - 处理 syscall 或结束当前应用
+    - 决定继续当前应用还是进入下一个应用
+  integration_order:
+    - linker
+    - console
+    - kernel-context-local
+    - syscall-kernel-dispatch
+validation:
+  unit_tests: []
+  build_checks: ["APP_ASM=<path> cargo check -p ch2 --target riscv64gc-unknown-none-elf"]
+  runtime_checks: ["cargo qemu --ch 2"]
+exclusions:
+  - APP_ASM 具体内容不属于章节契约本身
+

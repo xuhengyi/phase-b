@@ -1,0 +1,48 @@
+version: 1
+spec_id: ch1
+kind: chapter
+source_crate: ch1
+artifact: bin
+role: 最小章节内核
+inputs:
+  depends_on_specs: [linker, console]
+  target_arch: [riscv64gc-unknown-none-elf]
+  features: []
+  env: []
+public_surface:
+  traits: []
+  types: []
+  functions: [rust_main]
+  macros: [linker::boot0!]
+generation_contract:
+  required_modules: [build.rs, src/main.rs]
+  implementation_order:
+    - 生成 build.rs 写出 linker.ld
+    - 定义启动入口和 rust_main
+    - 初始化控制台并打印消息
+    - 通过 SBI 结束执行
+  invariants:
+    - 入口必须通过 linker::boot0! 建立
+    - rust_main 完成最小初始化后可安全打印
+  failure_semantics:
+    - 构建时缺失 linker.ld 生成应直接失败
+  unspecified:
+    - 启动消息内容文本本身不是契约核心
+composition:
+  child_specs: [linker, console]
+  boot_sequence:
+    - 写出 linker 脚本
+    - 进入 boot0 入口
+    - 初始化控制台
+    - 执行 rust_main
+    - 调用 SBI 结束
+  trap_flow: []
+  integration_order:
+    - 先接入 linker
+    - 再接入 console
+validation:
+  unit_tests: []
+  build_checks: ["cargo check -p ch1 --target riscv64gc-unknown-none-elf"]
+  runtime_checks: ["cargo qemu --ch 1"]
+exclusions: []
+

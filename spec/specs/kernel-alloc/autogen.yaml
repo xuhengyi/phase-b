@@ -1,0 +1,39 @@
+version: 1
+spec_id: kernel-alloc
+kind: leaf
+source_crate: kernel-alloc
+artifact: lib
+role: 基于 buddy allocator 的全局堆分配器
+inputs:
+  depends_on_specs: []
+  target_arch: [riscv64gc-unknown-none-elf, host-test]
+  features: []
+  env: []
+public_surface:
+  traits: []
+  types: []
+  functions: [init, transfer]
+  macros: []
+generation_contract:
+  required_modules: [src/lib.rs]
+  implementation_order:
+    - 定义全局堆状态和初始化入口
+    - 实现 transfer 追加可用区域
+    - 接入全局分配器
+  invariants:
+    - 非测试构建保持 no_std 和全局分配器语义
+    - init 后可进行动态分配
+    - transfer 追加的区域进入堆管理范围
+    - 多个存活分配结果互不重叠
+  failure_semantics:
+    - 分配失败走全局分配失败路径
+  unspecified:
+    - 并发安全不属于当前契约
+    - 非法重叠 region 的精确行为未写死
+validation:
+  unit_tests: [kernel-alloc/src/tests.rs]
+  build_checks: ["cargo check -p kernel-alloc --target riscv64gc-unknown-none-elf"]
+  runtime_checks: []
+exclusions:
+  - test_support 和宿主分配器只用于测试
+

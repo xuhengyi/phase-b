@@ -1,0 +1,2 @@
+cargo:rerun-if-changed=build.rs
+cargo:rustc-link-arg=-T/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/build/ch1-9789f45647ad3c43/out/linker.ld

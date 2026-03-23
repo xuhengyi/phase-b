@@ -1,0 +1,38 @@
+version: 1
+spec_id: easy-fs-vfs
+kind: leaf
+source_crate: easy-fs
+artifact: lib
+role: easy-fs 的 inode 与文件句柄层
+inputs:
+  depends_on_specs: [easy-fs-storage]
+  target_arch: [riscv64gc-unknown-none-elf, host-test]
+  features: []
+  env: []
+public_surface:
+  traits: []
+  types: [Inode, File, FileHandle, OpenFlags, FSManager, DiskInodeType]
+  functions: []
+  macros: []
+generation_contract:
+  required_modules: [src/vfs.rs, src/file.rs]
+  implementation_order:
+    - 实现 Inode 命名空间操作
+    - 实现 FileHandle 偏移语义
+    - 实现 FSManager 适配接口
+  invariants:
+    - create/find/readdir 维持 inode 命名空间一致性
+    - clear 后从 EOF 读取返回 0
+    - 顺序读写维护文件句柄偏移
+    - OpenFlags 提供稳定读写/创建/截断语义
+  failure_semantics:
+    - 目录或文件不存在时不得伪造成功结果
+  unspecified:
+    - 名称过长等错误当前未统一成稳定错误返回
+validation:
+  unit_tests: [easy-fs/src/tests.rs]
+  build_checks: ["cargo check -p easy-fs --target riscv64gc-unknown-none-elf"]
+  runtime_checks: []
+exclusions:
+  - 测试中的具体 panic 行为不自动升格为稳定契约
+

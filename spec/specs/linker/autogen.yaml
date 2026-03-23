@@ -1,0 +1,38 @@
+version: 1
+spec_id: linker
+kind: leaf
+source_crate: linker
+artifact: lib
+role: 链接脚本模板与启动布局抽象
+inputs:
+  depends_on_specs: []
+  target_arch: [riscv64gc-unknown-none-elf]
+  features: []
+  env: []
+public_surface:
+  traits: []
+  types: [KernelLayout, KernelRegion, AppMeta, AppIterator]
+  functions: []
+  macros: [boot0!]
+generation_contract:
+  required_modules: [src/lib.rs, src/app.rs]
+  implementation_order:
+    - 定义 SCRIPT 常量和布局符号
+    - 实现 boot0! 启动宏
+    - 实现 KernelLayout 和 AppIterator 解析逻辑
+  invariants:
+    - SCRIPT 含核心段标记和布局符号
+    - KernelLayout::INIT 可遍历既定区域
+    - AppIterator 按链接顺序枚举应用
+    - 固定槽位拷贝时尾部未覆盖区域清零
+  failure_semantics:
+    - 应用元数据非法时不得越界读取
+  unspecified:
+    - 内部符号命名细节除 spec 显式列出的部分外不要求完全一致
+validation:
+  unit_tests: [linker/src/tests.rs]
+  build_checks: ["cargo check -p linker"]
+  runtime_checks: []
+exclusions:
+  - doctest fence 调整不属于运行时契约
+

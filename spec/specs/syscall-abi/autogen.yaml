@@ -1,0 +1,35 @@
+version: 1
+spec_id: syscall-abi
+kind: leaf
+source_crate: syscall
+artifact: lib
+role: syscall 编号与 ABI 定义层
+inputs:
+  depends_on_specs: [signal-defs]
+  target_arch: [riscv64gc-unknown-none-elf, host-test]
+  features: []
+  env: []
+public_surface:
+  traits: []
+  types: [SyscallId, ClockId, TimeSpec, SignalNo, SignalAction]
+  functions: []
+  macros: []
+generation_contract:
+  required_modules: [build.rs, src/io.rs, src/time.rs, src/syscall.h.in]
+  implementation_order:
+    - 定义 ABI 辅助类型
+    - 保持常用 syscall 常量稳定编号
+    - 实现 build.rs 生成 syscalls.rs
+  invariants:
+    - 常用 syscall 编号与模板一致
+    - build.rs 修改模板后重新生成 Rust ABI 定义
+  failure_semantics:
+    - 模板缺失或生成失败时构建应失败
+  unspecified:
+    - 未在 spec 中列出的 syscall 编号不要求在 prose 中逐个展开
+validation:
+  unit_tests: [syscall/src/tests.rs]
+  build_checks: ["cargo check -p syscall --target riscv64gc-unknown-none-elf"]
+  runtime_checks: []
+exclusions: []
+

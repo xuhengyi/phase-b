@@ -1,0 +1,41 @@
+version: 1
+spec_id: task-manage
+kind: aggregate
+source_crate: task-manage
+artifact: lib
+role: 聚合任务核心抽象与关系管理
+inputs:
+  depends_on_specs: [task-manage-core, task-manage-relations]
+  target_arch: [riscv64gc-unknown-none-elf, host-test]
+  features: [proc, thread]
+  env: []
+public_surface:
+  traits: [Manage, Schedule]
+  types: [ProcId, ThreadId, CoroId, PManager, ProcRel, ProcThreadRel, PThreadManager]
+  functions: []
+  macros: []
+generation_contract:
+  required_modules: [src/lib.rs]
+  implementation_order:
+    - 先满足 task-manage-core
+    - 再满足 task-manage-relations
+    - 最后实现统一导出表面
+  invariants:
+    - 统一 crate 表面同时服务核心抽象和 feature 化关系层
+    - 聚合层不重复子能力内部逻辑
+  failure_semantics:
+    - 聚合层不得修改子能力 wait 语义
+  unspecified:
+    - 聚合层无独立附加运行时行为
+composition:
+  child_specs: [task-manage-core, task-manage-relations]
+  integration_order:
+    - 先定义 ID 和抽象 trait
+    - 再接入 proc/thread 关系层
+validation:
+  unit_tests: [task-manage/src/tests.rs]
+  build_checks:
+    - "cargo check -p rcore-task-manage --target riscv64gc-unknown-none-elf"
+    - "cargo check -p rcore-task-manage --features 'proc thread' --target riscv64gc-unknown-none-elf"
+  runtime_checks: []
+exclusions: []

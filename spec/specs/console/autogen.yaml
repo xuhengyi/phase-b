@@ -1,0 +1,37 @@
+version: 1
+spec_id: console
+kind: leaf
+source_crate: console
+artifact: lib
+role: 全局控制台和日志输出表面
+inputs:
+  depends_on_specs: []
+  target_arch: [riscv64gc-unknown-none-elf, host-test]
+  features: []
+  env: []
+public_surface:
+  traits: [Console]
+  types: []
+  functions: [init_console, set_log_level, _print, test_log]
+  macros: [print!, println!]
+generation_contract:
+  required_modules: [src/lib.rs]
+  implementation_order:
+    - 定义 Console trait 和全局单例 sink
+    - 实现 _print / print! / println! 输出路径
+    - 接入 log facade 和日志级别控制
+  invariants:
+    - 控制台 sink 初始化后作为全局单例使用
+    - println! 末尾自动追加换行
+    - 日志消息在级别允许时经由控制台输出
+  failure_semantics:
+    - 未初始化控制台时不得产生未定义行为
+  unspecified:
+    - 非法日志级别字符串的精确处理策略未完全写死
+validation:
+  unit_tests: [console/src/tests.rs]
+  build_checks: ["cargo check -p rcore-console"]
+  runtime_checks: []
+exclusions:
+  - tests 中的宿主 TestConsole 实现不是运行时契约的一部分
+

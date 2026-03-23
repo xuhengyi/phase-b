@@ -1,0 +1,35 @@
+version: 1
+spec_id: syscall-kernel-dispatch
+kind: leaf
+source_crate: syscall
+artifact: lib
+role: kernel feature 下的系统调用分发层
+inputs:
+  depends_on_specs: [syscall-abi, kernel-context]
+  target_arch: [riscv64gc-unknown-none-elf]
+  features: [kernel]
+  env: []
+public_surface:
+  traits: [Process, IO, Memory, Scheduling, Clock, Signal, Thread, SyncMutex]
+  types: [Caller, SyscallResult]
+  functions: [handle]
+  macros: []
+generation_contract:
+  required_modules: [src/kernel/mod.rs]
+  implementation_order:
+    - 定义 Caller/SyscallResult 和 service traits
+    - 实现服务注册入口
+    - 实现 handle 分发表
+  invariants:
+    - 分发层与具体内核服务实现解耦
+    - trap handler 可通过 handle 进入分发
+  failure_semantics:
+    - 未安装的服务不得伪造成功结果
+  unspecified:
+    - 更细的 errno 映射仍需上层继续形式化
+validation:
+  unit_tests: []
+  build_checks: ["cargo check -p syscall --features kernel --target riscv64gc-unknown-none-elf"]
+  runtime_checks: []
+exclusions: []
+

@@ -1,0 +1,37 @@
+version: 1
+spec_id: sync-blocking-primitives
+kind: leaf
+source_crate: sync
+artifact: lib
+role: 阻塞式互斥锁、条件变量与信号量
+inputs:
+  depends_on_specs: [sync-up-cell, task-manage-core]
+  target_arch: [riscv64gc-unknown-none-elf, host-test]
+  features: []
+  env: []
+public_surface:
+  traits: [Mutex]
+  types: [MutexBlocking, Condvar, Semaphore]
+  functions: []
+  macros: []
+generation_contract:
+  required_modules: [src/mutex.rs, src/condvar.rs, src/semaphore.rs]
+  implementation_order:
+    - 实现 mutex 阻塞与解锁唤醒
+    - 实现 condvar wait/signal
+    - 实现 semaphore down/up
+  invariants:
+    - mutex 解锁时可返回等待者
+    - condvar 与 semaphore 的唤醒允许等待者恢复
+    - 同步对象建立在单处理器模型上
+  failure_semantics:
+    - 锁竞争时进入等待路径而不是伪造成功
+  unspecified:
+    - wait_with_mutex 当前简化时序不写死为长期契约
+validation:
+  unit_tests: [sync/src/tests.rs]
+  build_checks: ["cargo check -p sync --target riscv64gc-unknown-none-elf"]
+  runtime_checks: []
+exclusions:
+  - 测试中对具体等待顺序的假设不自动升级为契约
+

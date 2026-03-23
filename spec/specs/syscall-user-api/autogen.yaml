@@ -1,0 +1,64 @@
+version: 1
+spec_id: syscall-user-api
+kind: leaf
+source_crate: syscall
+artifact: lib
+role: user feature 下的系统调用封装层
+inputs:
+  depends_on_specs: [syscall-abi]
+  target_arch: [riscv64gc-unknown-none-elf, host-test]
+  features: [user]
+  env: []
+public_surface:
+  traits: []
+  types: [OpenFlags, ClockId, TimeSpec]
+  functions:
+    - write
+    - read
+    - open
+    - close
+    - exit
+    - sched_yield
+    - clock_gettime
+    - fork
+    - exec
+    - wait
+    - waitpid
+    - getpid
+    - kill
+    - sigaction
+    - sigprocmask
+    - sigreturn
+    - thread_create
+    - gettid
+    - waittid
+    - semaphore_create
+    - semaphore_up
+    - semaphore_down
+    - mutex_create
+    - mutex_lock
+    - mutex_unlock
+    - condvar_create
+    - condvar_signal
+    - condvar_wait
+  macros: []
+generation_contract:
+  required_modules: [src/user.rs]
+  implementation_order:
+    - 定义 native syscallN 封装
+    - 实现高层用户态包装函数
+    - 暴露 ABI 辅助类型与标志位
+  invariants:
+    - user feature 打开后上述封装函数可直接引用
+    - OpenFlags/ClockId/TimeSpec 语义与 ABI 层一致
+  failure_semantics:
+    - 系统调用失败由返回值表达
+  unspecified:
+    - host stub 返回值只用于测试支持
+validation:
+  unit_tests: [syscall/src/tests.rs]
+  build_checks: ["cargo check -p syscall --features user --target riscv64gc-unknown-none-elf"]
+  runtime_checks: []
+exclusions:
+  - 非 riscv64 目标上的 -1 stub 不属于正式运行时契约
+
