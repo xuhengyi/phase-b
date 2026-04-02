@@ -1,5 +1,5 @@
-   0.198405080s  INFO prepare_target{force=false package_id=ch1 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch1) target="ch1"}: cargo::core::compiler::fingerprint: fingerprint error for ch1 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch1)/Check { test: false }/TargetInner { name: "ch1", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch1/src/main.rs", Edition2021) }
-   0.198462950s  INFO prepare_target{force=false package_id=ch1 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch1) target="ch1"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch1-43ed183768e7fe27/bin-ch1`
+   0.094505817s  INFO prepare_target{force=false package_id=ch1 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch1) target="ch1"}: cargo::core::compiler::fingerprint: fingerprint error for ch1 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch1)/Check { test: false }/TargetInner { name: "ch1", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch1/src/main.rs", Edition2021) }
+   0.094608011s  INFO prepare_target{force=false package_id=ch1 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch1) target="ch1"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch1-43ed183768e7fe27/bin-ch1`
 
 Caused by:
     No such file or directory (os error 2)
@@ -43,8 +43,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.614063979s  INFO prepare_target{force=false package_id=sbi-rt v0.0.2 target="sbi_rt"}: cargo::core::compiler::fingerprint: fingerprint error for sbi-rt v0.0.2/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("sbi_rt", ["lib"], "/home/xu-hy22/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sbi-rt-0.0.2/src/lib.rs", Edition2021) }
-   0.614110187s  INFO prepare_target{force=false package_id=sbi-rt v0.0.2 target="sbi_rt"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/sbi-rt-6e9a2f1a1b484cc6/lib-sbi_rt`
+   0.292228674s  INFO prepare_target{force=false package_id=sbi-rt v0.0.2 target="sbi_rt"}: cargo::core::compiler::fingerprint: fingerprint error for sbi-rt v0.0.2/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("sbi_rt", ["lib"], "/home/xu-hy22/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sbi-rt-0.0.2/src/lib.rs", Edition2021) }
+   0.292267868s  INFO prepare_target{force=false package_id=sbi-rt v0.0.2 target="sbi_rt"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/sbi-rt-6e9a2f1a1b484cc6/lib-sbi_rt`
 
 Caused by:
     No such file or directory (os error 2)
@@ -89,8 +89,8 @@ Stack backtrace:
   26: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   27: <unknown>
-   0.614708835s  INFO prepare_target{force=false package_id=ch1 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch1) target="ch1"}: cargo::core::compiler::fingerprint: fingerprint error for ch1 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch1)/Check { test: true }/TargetInner { name: "ch1", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch1/src/main.rs", Edition2021) }
-   0.614740585s  INFO prepare_target{force=false package_id=ch1 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch1) target="ch1"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch1-b264825c83d7e6fb/test-bin-ch1`
+   0.293289966s  INFO prepare_target{force=false package_id=ch1 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch1) target="ch1"}: cargo::core::compiler::fingerprint: fingerprint error for ch1 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch1)/Check { test: true }/TargetInner { name: "ch1", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch1/src/main.rs", Edition2021) }
+   0.293322869s  INFO prepare_target{force=false package_id=ch1 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch1) target="ch1"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch1-b264825c83d7e6fb/test-bin-ch1`
 
 Caused by:
     No such file or directory (os error 2)
@@ -134,8 +134,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.616320689s  INFO prepare_target{force=false package_id=ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2) target="ch2"}: cargo::core::compiler::fingerprint: fingerprint error for ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2)/Check { test: false }/TargetInner { name: "ch2", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch2/src/main.rs", Edition2021) }
-   0.616355074s  INFO prepare_target{force=false package_id=ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2) target="ch2"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch2-a27c9acf35e59fdf/bin-ch2`
+   0.300394230s  INFO prepare_target{force=false package_id=ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2) target="ch2"}: cargo::core::compiler::fingerprint: fingerprint error for ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2)/Check { test: false }/TargetInner { name: "ch2", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch2/src/main.rs", Edition2021) }
+   0.300442973s  INFO prepare_target{force=false package_id=ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2) target="ch2"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch2-a27c9acf35e59fdf/bin-ch2`
 
 Caused by:
     No such file or directory (os error 2)
@@ -179,192 +179,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.616746568s  INFO prepare_target{force=false package_id=ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2)/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch2/build.rs", Edition2021) }
-   0.616774481s  INFO prepare_target{force=false package_id=ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch2-cc0b2c6a1bed304a/run-build-script-build-script-build`
-
-Caused by:
-    No such file or directory (os error 2)
-
-Stack backtrace:
-   0: cargo_util::paths::read_bytes
-   1: cargo_util::paths::read
-   2: cargo::core::compiler::fingerprint::_compare_old_fingerprint
-   3: cargo::core::compiler::fingerprint::prepare_target
-   4: cargo::core::compiler::custom_build::build_work
-   5: cargo::core::compiler::compile
-   6: cargo::core::compiler::compile
-   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
-   8: cargo::ops::cargo_compile::compile_ws
-   9: cargo::ops::cargo_compile::compile_with_exec
-  10: cargo::ops::cargo_compile::compile
-  11: cargo::commands::check::exec
-  12: <cargo::cli::Exec>::exec
-  13: cargo::main
-  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-  15: std::rt::lang_start::<()>::{closure#0}
-  16: core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/core/src/ops/function.rs:287:21
-  17: std::panicking::catch_unwind::do_call
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:590:40
-  18: std::panicking::catch_unwind
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:553:19
-  19: std::panic::catch_unwind
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panic.rs:359:14
-  20: std::rt::lang_start_internal::{{closure}}
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/rt.rs:175:24
-  21: std::panicking::catch_unwind::do_call
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:590:40
-  22: std::panicking::catch_unwind
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:553:19
-  23: std::panic::catch_unwind
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panic.rs:359:14
-  24: std::rt::lang_start_internal
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/rt.rs:171:5
-  25: main
-  26: __libc_start_call_main
-             at ./csu/../sysdeps/nptl/libc_start_call_main.h:58:16
-  27: __libc_start_main_impl
-             at ./csu/../csu/libc-start.c:392:3
-  28: <unknown>
-   0.616920980s  INFO prepare_target{force=false package_id=ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2)/Build/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch2/build.rs", Edition2021) }
-   0.616928454s  INFO prepare_target{force=false package_id=ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch2-11bc9b8c94a5e380/build-script-build-script-build`
-
-Caused by:
-    No such file or directory (os error 2)
-
-Stack backtrace:
-   0: cargo_util::paths::read_bytes
-   1: cargo_util::paths::read
-   2: cargo::core::compiler::fingerprint::_compare_old_fingerprint
-   3: cargo::core::compiler::fingerprint::prepare_target
-   4: cargo::core::compiler::compile
-   5: cargo::core::compiler::compile
-   6: cargo::core::compiler::compile
-   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
-   8: cargo::ops::cargo_compile::compile_ws
-   9: cargo::ops::cargo_compile::compile_with_exec
-  10: cargo::ops::cargo_compile::compile
-  11: cargo::commands::check::exec
-  12: <cargo::cli::Exec>::exec
-  13: cargo::main
-  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-  15: std::rt::lang_start::<()>::{closure#0}
-  16: core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/core/src/ops/function.rs:287:21
-  17: std::panicking::catch_unwind::do_call
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:590:40
-  18: std::panicking::catch_unwind
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:553:19
-  19: std::panic::catch_unwind
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panic.rs:359:14
-  20: std::rt::lang_start_internal::{{closure}}
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/rt.rs:175:24
-  21: std::panicking::catch_unwind::do_call
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:590:40
-  22: std::panicking::catch_unwind
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:553:19
-  23: std::panic::catch_unwind
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panic.rs:359:14
-  24: std::rt::lang_start_internal
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/rt.rs:171:5
-  25: main
-  26: __libc_start_call_main
-             at ./csu/../sysdeps/nptl/libc_start_call_main.h:58:16
-  27: __libc_start_main_impl
-             at ./csu/../csu/libc-start.c:392:3
-  28: <unknown>
-   0.619399737s  INFO prepare_target{force=false package_id=ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2) target="ch2"}: cargo::core::compiler::fingerprint: fingerprint error for ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2)/Check { test: true }/TargetInner { name: "ch2", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch2/src/main.rs", Edition2021) }
-   0.619471814s  INFO prepare_target{force=false package_id=ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2) target="ch2"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch2-bb354ebd098929a0/test-bin-ch2`
-
-Caused by:
-    No such file or directory (os error 2)
-
-Stack backtrace:
-   0: cargo_util::paths::read_bytes
-   1: cargo_util::paths::read
-   2: cargo::core::compiler::fingerprint::_compare_old_fingerprint
-   3: cargo::core::compiler::fingerprint::prepare_target
-   4: cargo::core::compiler::compile
-   5: <cargo::core::compiler::build_runner::BuildRunner>::compile
-   6: cargo::ops::cargo_compile::compile_ws
-   7: cargo::ops::cargo_compile::compile_with_exec
-   8: cargo::ops::cargo_compile::compile
-   9: cargo::commands::check::exec
-  10: <cargo::cli::Exec>::exec
-  11: cargo::main
-  12: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-  13: std::rt::lang_start::<()>::{closure#0}
-  14: core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/core/src/ops/function.rs:287:21
-  15: std::panicking::catch_unwind::do_call
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:590:40
-  16: std::panicking::catch_unwind
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:553:19
-  17: std::panic::catch_unwind
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panic.rs:359:14
-  18: std::rt::lang_start_internal::{{closure}}
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/rt.rs:175:24
-  19: std::panicking::catch_unwind::do_call
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:590:40
-  20: std::panicking::catch_unwind
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:553:19
-  21: std::panic::catch_unwind
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panic.rs:359:14
-  22: std::rt::lang_start_internal
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/rt.rs:171:5
-  23: main
-  24: __libc_start_call_main
-             at ./csu/../sysdeps/nptl/libc_start_call_main.h:58:16
-  25: __libc_start_main_impl
-             at ./csu/../csu/libc-start.c:392:3
-  26: <unknown>
-   0.620303394s  INFO prepare_target{force=false package_id=ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3) target="ch3"}: cargo::core::compiler::fingerprint: fingerprint error for ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3)/Check { test: false }/TargetInner { name: "ch3", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch3/src/main.rs", Edition2021) }
-   0.620339874s  INFO prepare_target{force=false package_id=ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3) target="ch3"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch3-49aba0c51ff58a16/bin-ch3`
-
-Caused by:
-    No such file or directory (os error 2)
-
-Stack backtrace:
-   0: cargo_util::paths::read_bytes
-   1: cargo_util::paths::read
-   2: cargo::core::compiler::fingerprint::_compare_old_fingerprint
-   3: cargo::core::compiler::fingerprint::prepare_target
-   4: cargo::core::compiler::compile
-   5: <cargo::core::compiler::build_runner::BuildRunner>::compile
-   6: cargo::ops::cargo_compile::compile_ws
-   7: cargo::ops::cargo_compile::compile_with_exec
-   8: cargo::ops::cargo_compile::compile
-   9: cargo::commands::check::exec
-  10: <cargo::cli::Exec>::exec
-  11: cargo::main
-  12: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-  13: std::rt::lang_start::<()>::{closure#0}
-  14: core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/core/src/ops/function.rs:287:21
-  15: std::panicking::catch_unwind::do_call
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:590:40
-  16: std::panicking::catch_unwind
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:553:19
-  17: std::panic::catch_unwind
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panic.rs:359:14
-  18: std::rt::lang_start_internal::{{closure}}
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/rt.rs:175:24
-  19: std::panicking::catch_unwind::do_call
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:590:40
-  20: std::panicking::catch_unwind
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:553:19
-  21: std::panic::catch_unwind
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panic.rs:359:14
-  22: std::rt::lang_start_internal
-             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/rt.rs:171:5
-  23: main
-  24: __libc_start_call_main
-             at ./csu/../sysdeps/nptl/libc_start_call_main.h:58:16
-  25: __libc_start_main_impl
-             at ./csu/../csu/libc-start.c:392:3
-  26: <unknown>
-   0.620757127s  INFO prepare_target{force=false package_id=ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3)/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch3/build.rs", Edition2021) }
-   0.620794067s  INFO prepare_target{force=false package_id=ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch3-7c96d1f106731cf3/run-build-script-build-script-build`
+   0.300942382s  INFO prepare_target{force=false package_id=ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2)/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch2/build.rs", Edition2021) }
+   0.300978090s  INFO prepare_target{force=false package_id=ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch2-cc0b2c6a1bed304a/run-build-script-build-script-build`
 
 Caused by:
     No such file or directory (os error 2)
@@ -410,8 +226,8 @@ Stack backtrace:
   27: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   28: <unknown>
-   0.620984028s  INFO prepare_target{force=false package_id=ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3)/Build/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch3/build.rs", Edition2021) }
-   0.620992645s  INFO prepare_target{force=false package_id=ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch3-abf4ed934110790e/build-script-build-script-build`
+   0.301187999s  INFO prepare_target{force=false package_id=ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2)/Build/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch2/build.rs", Edition2021) }
+   0.301226973s  INFO prepare_target{force=false package_id=ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch2-11bc9b8c94a5e380/build-script-build-script-build`
 
 Caused by:
     No such file or directory (os error 2)
@@ -457,8 +273,8 @@ Stack backtrace:
   27: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   28: <unknown>
-   0.621360374s  INFO prepare_target{force=false package_id=ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3) target="ch3"}: cargo::core::compiler::fingerprint: fingerprint error for ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3)/Check { test: true }/TargetInner { name: "ch3", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch3/src/main.rs", Edition2021) }
-   0.621371364s  INFO prepare_target{force=false package_id=ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3) target="ch3"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch3-cf655b5f43447e47/test-bin-ch3`
+   0.306929017s  INFO prepare_target{force=false package_id=ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2) target="ch2"}: cargo::core::compiler::fingerprint: fingerprint error for ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2)/Check { test: true }/TargetInner { name: "ch2", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch2/src/main.rs", Edition2021) }
+   0.306971247s  INFO prepare_target{force=false package_id=ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2) target="ch2"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch2-bb354ebd098929a0/test-bin-ch2`
 
 Caused by:
     No such file or directory (os error 2)
@@ -502,8 +318,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.622413956s  INFO prepare_target{force=false package_id=ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4) target="ch4"}: cargo::core::compiler::fingerprint: fingerprint error for ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4)/Check { test: false }/TargetInner { name: "ch4", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch4/src/main.rs", Edition2021) }
-   0.622444354s  INFO prepare_target{force=false package_id=ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4) target="ch4"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch4-c9536f04a7ebfa24/bin-ch4`
+   0.309603836s  INFO prepare_target{force=false package_id=ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3) target="ch3"}: cargo::core::compiler::fingerprint: fingerprint error for ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3)/Check { test: false }/TargetInner { name: "ch3", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch3/src/main.rs", Edition2021) }
+   0.309637370s  INFO prepare_target{force=false package_id=ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3) target="ch3"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch3-49aba0c51ff58a16/bin-ch3`
 
 Caused by:
     No such file or directory (os error 2)
@@ -547,8 +363,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.623058522s  INFO prepare_target{force=false package_id=ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4)/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch4/build.rs", Edition2021) }
-   0.623089100s  INFO prepare_target{force=false package_id=ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch4-06a622fe6aa6d240/run-build-script-build-script-build`
+   0.310038923s  INFO prepare_target{force=false package_id=ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3)/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch3/build.rs", Edition2021) }
+   0.310062718s  INFO prepare_target{force=false package_id=ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch3-7c96d1f106731cf3/run-build-script-build-script-build`
 
 Caused by:
     No such file or directory (os error 2)
@@ -594,8 +410,8 @@ Stack backtrace:
   27: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   28: <unknown>
-   0.623297766s  INFO prepare_target{force=false package_id=ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4)/Build/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch4/build.rs", Edition2021) }
-   0.623305812s  INFO prepare_target{force=false package_id=ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch4-33b0165103f2fc02/build-script-build-script-build`
+   0.310224345s  INFO prepare_target{force=false package_id=ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3)/Build/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch3/build.rs", Edition2021) }
+   0.310234895s  INFO prepare_target{force=false package_id=ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch3-abf4ed934110790e/build-script-build-script-build`
 
 Caused by:
     No such file or directory (os error 2)
@@ -641,8 +457,8 @@ Stack backtrace:
   27: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   28: <unknown>
-   0.624212004s  INFO prepare_target{force=false package_id=ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4) target="ch4"}: cargo::core::compiler::fingerprint: fingerprint error for ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4)/Check { test: true }/TargetInner { name: "ch4", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch4/src/main.rs", Edition2021) }
-   0.624251219s  INFO prepare_target{force=false package_id=ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4) target="ch4"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch4-4c8f95cbfc4e457d/test-bin-ch4`
+   0.310507824s  INFO prepare_target{force=false package_id=ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3) target="ch3"}: cargo::core::compiler::fingerprint: fingerprint error for ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3)/Check { test: true }/TargetInner { name: "ch3", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch3/src/main.rs", Edition2021) }
+   0.310536028s  INFO prepare_target{force=false package_id=ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3) target="ch3"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch3-cf655b5f43447e47/test-bin-ch3`
 
 Caused by:
     No such file or directory (os error 2)
@@ -686,8 +502,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.625302837s  INFO prepare_target{force=false package_id=ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5) target="ch5"}: cargo::core::compiler::fingerprint: fingerprint error for ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5)/Check { test: false }/TargetInner { name: "ch5", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch5/src/main.rs", Edition2021) }
-   0.625347783s  INFO prepare_target{force=false package_id=ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5) target="ch5"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch5-a63d6464b07228d0/bin-ch5`
+   0.314468823s  INFO prepare_target{force=false package_id=ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4) target="ch4"}: cargo::core::compiler::fingerprint: fingerprint error for ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4)/Check { test: false }/TargetInner { name: "ch4", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch4/src/main.rs", Edition2021) }
+   0.314514721s  INFO prepare_target{force=false package_id=ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4) target="ch4"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch4-c9536f04a7ebfa24/bin-ch4`
 
 Caused by:
     No such file or directory (os error 2)
@@ -731,8 +547,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.625934648s  INFO prepare_target{force=false package_id=ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5)/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch5/build.rs", Edition2021) }
-   0.625965096s  INFO prepare_target{force=false package_id=ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch5-0ad9e4fa1ce75a02/run-build-script-build-script-build`
+   0.315032164s  INFO prepare_target{force=false package_id=ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4)/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch4/build.rs", Edition2021) }
+   0.315060568s  INFO prepare_target{force=false package_id=ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch4-06a622fe6aa6d240/run-build-script-build-script-build`
 
 Caused by:
     No such file or directory (os error 2)
@@ -778,8 +594,8 @@ Stack backtrace:
   27: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   28: <unknown>
-   0.626090655s  INFO prepare_target{force=false package_id=ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5)/Build/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch5/build.rs", Edition2021) }
-   0.626098109s  INFO prepare_target{force=false package_id=ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch5-d8b14bb0deed3465/build-script-build-script-build`
+   0.315178883s  INFO prepare_target{force=false package_id=ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4)/Build/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch4/build.rs", Edition2021) }
+   0.315186137s  INFO prepare_target{force=false package_id=ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch4-33b0165103f2fc02/build-script-build-script-build`
 
 Caused by:
     No such file or directory (os error 2)
@@ -825,8 +641,8 @@ Stack backtrace:
   27: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   28: <unknown>
-   0.626661841s  INFO prepare_target{force=false package_id=ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5) target="ch5"}: cargo::core::compiler::fingerprint: fingerprint error for ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5)/Check { test: true }/TargetInner { name: "ch5", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch5/src/main.rs", Edition2021) }
-   0.626701286s  INFO prepare_target{force=false package_id=ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5) target="ch5"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch5-b36243329ede28f6/test-bin-ch5`
+   0.317256542s  INFO prepare_target{force=false package_id=ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4) target="ch4"}: cargo::core::compiler::fingerprint: fingerprint error for ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4)/Check { test: true }/TargetInner { name: "ch4", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch4/src/main.rs", Edition2021) }
+   0.317293412s  INFO prepare_target{force=false package_id=ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4) target="ch4"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch4-4c8f95cbfc4e457d/test-bin-ch4`
 
 Caused by:
     No such file or directory (os error 2)
@@ -870,8 +686,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.628287661s  INFO prepare_target{force=false package_id=ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6) target="ch6"}: cargo::core::compiler::fingerprint: fingerprint error for ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6)/Check { test: false }/TargetInner { name: "ch6", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch6/src/main.rs", Edition2021) }
-   0.628335783s  INFO prepare_target{force=false package_id=ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6) target="ch6"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch6-6b8b7b16e84c8436/bin-ch6`
+   0.321343100s  INFO prepare_target{force=false package_id=ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5) target="ch5"}: cargo::core::compiler::fingerprint: fingerprint error for ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5)/Check { test: false }/TargetInner { name: "ch5", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch5/src/main.rs", Edition2021) }
+   0.321420647s  INFO prepare_target{force=false package_id=ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5) target="ch5"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch5-a63d6464b07228d0/bin-ch5`
 
 Caused by:
     No such file or directory (os error 2)
@@ -915,8 +731,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.628894324s  INFO prepare_target{force=false package_id=ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6)/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch6/build.rs", Edition2021) }
-   0.628925333s  INFO prepare_target{force=false package_id=ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch6-bec1d2f747391dd3/run-build-script-build-script-build`
+   0.322439203s  INFO prepare_target{force=false package_id=ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5)/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch5/build.rs", Edition2021) }
+   0.322478117s  INFO prepare_target{force=false package_id=ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch5-0ad9e4fa1ce75a02/run-build-script-build-script-build`
 
 Caused by:
     No such file or directory (os error 2)
@@ -962,8 +778,8 @@ Stack backtrace:
   27: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   28: <unknown>
-   0.629078424s  INFO prepare_target{force=false package_id=ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6)/Build/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch6/build.rs", Edition2021) }
-   0.629091609s  INFO prepare_target{force=false package_id=ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch6-060cb173efd6068d/build-script-build-script-build`
+   0.322843362s  INFO prepare_target{force=false package_id=ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5)/Build/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch5/build.rs", Edition2021) }
+   0.322901011s  INFO prepare_target{force=false package_id=ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch5-d8b14bb0deed3465/build-script-build-script-build`
 
 Caused by:
     No such file or directory (os error 2)
@@ -1009,8 +825,8 @@ Stack backtrace:
   27: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   28: <unknown>
-   0.629673545s  INFO prepare_target{force=false package_id=ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6) target="ch6"}: cargo::core::compiler::fingerprint: fingerprint error for ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6)/Check { test: true }/TargetInner { name: "ch6", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch6/src/main.rs", Edition2021) }
-   0.629718481s  INFO prepare_target{force=false package_id=ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6) target="ch6"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch6-dd711c38d915fabe/test-bin-ch6`
+   0.323863811s  INFO prepare_target{force=false package_id=ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5) target="ch5"}: cargo::core::compiler::fingerprint: fingerprint error for ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5)/Check { test: true }/TargetInner { name: "ch5", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch5/src/main.rs", Edition2021) }
+   0.323908316s  INFO prepare_target{force=false package_id=ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5) target="ch5"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch5-b36243329ede28f6/test-bin-ch5`
 
 Caused by:
     No such file or directory (os error 2)
@@ -1054,8 +870,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.630669278s  INFO prepare_target{force=false package_id=ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7) target="ch7"}: cargo::core::compiler::fingerprint: fingerprint error for ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7)/Check { test: false }/TargetInner { name: "ch7", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch7/src/main.rs", Edition2021) }
-   0.630704174s  INFO prepare_target{force=false package_id=ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7) target="ch7"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch7-55fae81699525877/bin-ch7`
+   0.328642514s  INFO prepare_target{force=false package_id=ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6) target="ch6"}: cargo::core::compiler::fingerprint: fingerprint error for ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6)/Check { test: false }/TargetInner { name: "ch6", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch6/src/main.rs", Edition2021) }
+   0.328713970s  INFO prepare_target{force=false package_id=ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6) target="ch6"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch6-6b8b7b16e84c8436/bin-ch6`
 
 Caused by:
     No such file or directory (os error 2)
@@ -1099,8 +915,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.631219163s  INFO prepare_target{force=false package_id=ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7)/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch7/build.rs", Edition2021) }
-   0.631228581s  INFO prepare_target{force=false package_id=ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch7-687f935d5e4a1286/run-build-script-build-script-build`
+   0.329535732s  INFO prepare_target{force=false package_id=ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6)/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch6/build.rs", Edition2021) }
+   0.329575718s  INFO prepare_target{force=false package_id=ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch6-bec1d2f747391dd3/run-build-script-build-script-build`
 
 Caused by:
     No such file or directory (os error 2)
@@ -1146,8 +962,8 @@ Stack backtrace:
   27: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   28: <unknown>
-   0.631352657s  INFO prepare_target{force=false package_id=ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7)/Build/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch7/build.rs", Edition2021) }
-   0.631360241s  INFO prepare_target{force=false package_id=ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch7-a2c0435fad4ccae5/build-script-build-script-build`
+   0.329761592s  INFO prepare_target{force=false package_id=ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6)/Build/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch6/build.rs", Edition2021) }
+   0.329769967s  INFO prepare_target{force=false package_id=ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch6-060cb173efd6068d/build-script-build-script-build`
 
 Caused by:
     No such file or directory (os error 2)
@@ -1193,8 +1009,8 @@ Stack backtrace:
   27: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   28: <unknown>
-   0.631834282s  INFO prepare_target{force=false package_id=ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7) target="ch7"}: cargo::core::compiler::fingerprint: fingerprint error for ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7)/Check { test: true }/TargetInner { name: "ch7", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch7/src/main.rs", Edition2021) }
-   0.631866063s  INFO prepare_target{force=false package_id=ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7) target="ch7"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch7-8b7de9b03b7bacca/test-bin-ch7`
+   0.331406268s  INFO prepare_target{force=false package_id=ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6) target="ch6"}: cargo::core::compiler::fingerprint: fingerprint error for ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6)/Check { test: true }/TargetInner { name: "ch6", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch6/src/main.rs", Edition2021) }
+   0.331446063s  INFO prepare_target{force=false package_id=ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6) target="ch6"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch6-dd711c38d915fabe/test-bin-ch6`
 
 Caused by:
     No such file or directory (os error 2)
@@ -1238,8 +1054,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.632770612s  INFO prepare_target{force=false package_id=ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8) target="ch8"}: cargo::core::compiler::fingerprint: fingerprint error for ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8)/Check { test: false }/TargetInner { name: "ch8", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch8/src/main.rs", Edition2021) }
-   0.632807572s  INFO prepare_target{force=false package_id=ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8) target="ch8"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch8-0492ffc79e64ed99/bin-ch8`
+   0.335926771s  INFO prepare_target{force=false package_id=ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7) target="ch7"}: cargo::core::compiler::fingerprint: fingerprint error for ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7)/Check { test: false }/TargetInner { name: "ch7", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch7/src/main.rs", Edition2021) }
+   0.336003266s  INFO prepare_target{force=false package_id=ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7) target="ch7"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch7-55fae81699525877/bin-ch7`
 
 Caused by:
     No such file or directory (os error 2)
@@ -1283,8 +1099,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.634377597s  INFO prepare_target{force=false package_id=ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8)/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch8/build.rs", Edition2021) }
-   0.634411652s  INFO prepare_target{force=false package_id=ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch8-2bc8979303f50d7f/run-build-script-build-script-build`
+   0.336860075s  INFO prepare_target{force=false package_id=ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7)/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch7/build.rs", Edition2021) }
+   0.336912604s  INFO prepare_target{force=false package_id=ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch7-687f935d5e4a1286/run-build-script-build-script-build`
 
 Caused by:
     No such file or directory (os error 2)
@@ -1330,8 +1146,8 @@ Stack backtrace:
   27: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   28: <unknown>
-   0.634625799s  INFO prepare_target{force=false package_id=ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8)/Build/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch8/build.rs", Edition2021) }
-   0.634634165s  INFO prepare_target{force=false package_id=ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch8-fde3fd722ac80980/build-script-build-script-build`
+   0.337131460s  INFO prepare_target{force=false package_id=ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7)/Build/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch7/build.rs", Edition2021) }
+   0.337143062s  INFO prepare_target{force=false package_id=ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch7-a2c0435fad4ccae5/build-script-build-script-build`
 
 Caused by:
     No such file or directory (os error 2)
@@ -1377,8 +1193,8 @@ Stack backtrace:
   27: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   28: <unknown>
-   0.635324221s  INFO prepare_target{force=false package_id=ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8) target="ch8"}: cargo::core::compiler::fingerprint: fingerprint error for ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8)/Check { test: true }/TargetInner { name: "ch8", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch8/src/main.rs", Edition2021) }
-   0.635372823s  INFO prepare_target{force=false package_id=ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8) target="ch8"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch8-44b8993b88d16a20/test-bin-ch8`
+   0.338649546s  INFO prepare_target{force=false package_id=ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7) target="ch7"}: cargo::core::compiler::fingerprint: fingerprint error for ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7)/Check { test: true }/TargetInner { name: "ch7", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch7/src/main.rs", Edition2021) }
+   0.338813127s  INFO prepare_target{force=false package_id=ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7) target="ch7"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch7-8b7de9b03b7bacca/test-bin-ch7`
 
 Caused by:
     No such file or directory (os error 2)
@@ -1422,8 +1238,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.637098003s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="user_lib"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("user_lib", ["lib"], "/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/lib.rs", Edition2021) }
-   0.637131717s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="user_lib"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-e8e5c6c26588dbfd/lib-user_lib`
+   0.343832478s  INFO prepare_target{force=false package_id=ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8) target="ch8"}: cargo::core::compiler::fingerprint: fingerprint error for ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8)/Check { test: false }/TargetInner { name: "ch8", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch8/src/main.rs", Edition2021) }
+   0.343891801s  INFO prepare_target{force=false package_id=ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8) target="ch8"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch8-0492ffc79e64ed99/bin-ch8`
 
 Caused by:
     No such file or directory (os error 2)
@@ -1467,8 +1283,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.637781903s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="user_lib"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("user_lib", ["lib"], "/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/lib.rs", Edition2021) }
-   0.637813813s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="user_lib"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-d5af8cbdf50cc839/test-lib-user_lib`
+   0.344760852s  INFO prepare_target{force=false package_id=ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8)/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch8/build.rs", Edition2021) }
+   0.344797001s  INFO prepare_target{force=false package_id=ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch8-2bc8979303f50d7f/run-build-script-build-script-build`
 
 Caused by:
     No such file or directory (os error 2)
@@ -1478,6 +1294,190 @@ Stack backtrace:
    1: cargo_util::paths::read
    2: cargo::core::compiler::fingerprint::_compare_old_fingerprint
    3: cargo::core::compiler::fingerprint::prepare_target
+   4: cargo::core::compiler::custom_build::build_work
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   8: cargo::ops::cargo_compile::compile_ws
+   9: cargo::ops::cargo_compile::compile_with_exec
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: <cargo::cli::Exec>::exec
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/core/src/ops/function.rs:287:21
+  17: std::panicking::catch_unwind::do_call
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:590:40
+  18: std::panicking::catch_unwind
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:553:19
+  19: std::panic::catch_unwind
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panic.rs:359:14
+  20: std::rt::lang_start_internal::{{closure}}
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/rt.rs:175:24
+  21: std::panicking::catch_unwind::do_call
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:590:40
+  22: std::panicking::catch_unwind
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:553:19
+  23: std::panic::catch_unwind
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panic.rs:359:14
+  24: std::rt::lang_start_internal
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/rt.rs:171:5
+  25: main
+  26: __libc_start_call_main
+             at ./csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+  27: __libc_start_main_impl
+             at ./csu/../csu/libc-start.c:392:3
+  28: <unknown>
+   0.344996601s  INFO prepare_target{force=false package_id=ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8)/Build/TargetInner { ..: custom_build_target("build-script-build", "/home/xu-hy22/Graduation/phase-b/candidate-template/ch8/build.rs", Edition2021) }
+   0.345012821s  INFO prepare_target{force=false package_id=ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch8-fde3fd722ac80980/build-script-build-script-build`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: cargo_util::paths::read_bytes
+   1: cargo_util::paths::read
+   2: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   3: cargo::core::compiler::fingerprint::prepare_target
+   4: cargo::core::compiler::compile
+   5: cargo::core::compiler::compile
+   6: cargo::core::compiler::compile
+   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   8: cargo::ops::cargo_compile::compile_ws
+   9: cargo::ops::cargo_compile::compile_with_exec
+  10: cargo::ops::cargo_compile::compile
+  11: cargo::commands::check::exec
+  12: <cargo::cli::Exec>::exec
+  13: cargo::main
+  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  15: std::rt::lang_start::<()>::{closure#0}
+  16: core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/core/src/ops/function.rs:287:21
+  17: std::panicking::catch_unwind::do_call
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:590:40
+  18: std::panicking::catch_unwind
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:553:19
+  19: std::panic::catch_unwind
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panic.rs:359:14
+  20: std::rt::lang_start_internal::{{closure}}
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/rt.rs:175:24
+  21: std::panicking::catch_unwind::do_call
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:590:40
+  22: std::panicking::catch_unwind
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:553:19
+  23: std::panic::catch_unwind
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panic.rs:359:14
+  24: std::rt::lang_start_internal
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/rt.rs:171:5
+  25: main
+  26: __libc_start_call_main
+             at ./csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+  27: __libc_start_main_impl
+             at ./csu/../csu/libc-start.c:392:3
+  28: <unknown>
+   0.345790099s  INFO prepare_target{force=false package_id=ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8) target="ch8"}: cargo::core::compiler::fingerprint: fingerprint error for ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8)/Check { test: true }/TargetInner { name: "ch8", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/ch8/src/main.rs", Edition2021) }
+   0.345828822s  INFO prepare_target{force=false package_id=ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8) target="ch8"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/ch8-44b8993b88d16a20/test-bin-ch8`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: cargo_util::paths::read_bytes
+   1: cargo_util::paths::read
+   2: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   3: cargo::core::compiler::fingerprint::prepare_target
+   4: cargo::core::compiler::compile
+   5: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   6: cargo::ops::cargo_compile::compile_ws
+   7: cargo::ops::cargo_compile::compile_with_exec
+   8: cargo::ops::cargo_compile::compile
+   9: cargo::commands::check::exec
+  10: <cargo::cli::Exec>::exec
+  11: cargo::main
+  12: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  13: std::rt::lang_start::<()>::{closure#0}
+  14: core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/core/src/ops/function.rs:287:21
+  15: std::panicking::catch_unwind::do_call
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:590:40
+  16: std::panicking::catch_unwind
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:553:19
+  17: std::panic::catch_unwind
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panic.rs:359:14
+  18: std::rt::lang_start_internal::{{closure}}
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/rt.rs:175:24
+  19: std::panicking::catch_unwind::do_call
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:590:40
+  20: std::panicking::catch_unwind
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:553:19
+  21: std::panic::catch_unwind
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panic.rs:359:14
+  22: std::rt::lang_start_internal
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/rt.rs:171:5
+  23: main
+  24: __libc_start_call_main
+             at ./csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+  25: __libc_start_main_impl
+             at ./csu/../csu/libc-start.c:392:3
+  26: <unknown>
+   0.355004914s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="user_lib"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("user_lib", ["lib"], "/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/lib.rs", Edition2021) }
+   0.355071972s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="user_lib"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-e8e5c6c26588dbfd/lib-user_lib`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: cargo_util::paths::read_bytes
+   1: cargo_util::paths::read
+   2: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   3: cargo::core::compiler::fingerprint::prepare_target
+   4: cargo::core::compiler::compile
+   5: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   6: cargo::ops::cargo_compile::compile_ws
+   7: cargo::ops::cargo_compile::compile_with_exec
+   8: cargo::ops::cargo_compile::compile
+   9: cargo::commands::check::exec
+  10: <cargo::cli::Exec>::exec
+  11: cargo::main
+  12: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  13: std::rt::lang_start::<()>::{closure#0}
+  14: core::ops::function::impls::<impl core::ops::function::FnOnce<A> for &F>::call_once
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/core/src/ops/function.rs:287:21
+  15: std::panicking::catch_unwind::do_call
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:590:40
+  16: std::panicking::catch_unwind
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:553:19
+  17: std::panic::catch_unwind
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panic.rs:359:14
+  18: std::rt::lang_start_internal::{{closure}}
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/rt.rs:175:24
+  19: std::panicking::catch_unwind::do_call
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:590:40
+  20: std::panicking::catch_unwind
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panicking.rs:553:19
+  21: std::panic::catch_unwind
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/panic.rs:359:14
+  22: std::rt::lang_start_internal
+             at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library/std/src/rt.rs:171:5
+  23: main
+  24: __libc_start_call_main
+             at ./csu/../sysdeps/nptl/libc_start_call_main.h:58:16
+  25: __libc_start_main_impl
+             at ./csu/../csu/libc-start.c:392:3
+  26: <unknown>
+   0.356514343s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="user_lib"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("user_lib", ["lib"], "/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/lib.rs", Edition2021) }
+   0.356572023s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="user_lib"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-d5af8cbdf50cc839/test-lib-user_lib`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: cargo_util::paths::read_bytes
+   1: cargo_util::paths::read
+   2: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   3: cargo::core::compiler::fingerprint::prepare_target
    4: cargo::core::compiler::compile
    5: <cargo::core::compiler::build_runner::BuildRunner>::compile
    6: cargo::ops::cargo_compile::compile_ws
@@ -1512,8 +1512,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.638185730s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="00hello_world"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "00hello_world", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/00hello_world.rs", Edition2021) }
-   0.638217150s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="00hello_world"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-5b001c9f6864a79d/bin-00hello_world`
+   0.357282734s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="00hello_world"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "00hello_world", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/00hello_world.rs", Edition2021) }
+   0.357326187s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="00hello_world"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-5b001c9f6864a79d/bin-00hello_world`
 
 Caused by:
     No such file or directory (os error 2)
@@ -1557,8 +1557,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.638469299s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="00hello_world"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "00hello_world", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/00hello_world.rs", Edition2021) }
-   0.638495660s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="00hello_world"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-f2d7af94cfebe175/test-bin-00hello_world`
+   0.357876783s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="00hello_world"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "00hello_world", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/00hello_world.rs", Edition2021) }
+   0.357919805s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="00hello_world"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-f2d7af94cfebe175/test-bin-00hello_world`
 
 Caused by:
     No such file or directory (os error 2)
@@ -1602,8 +1602,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.638748220s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="01store_fault"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "01store_fault", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/01store_fault.rs", Edition2021) }
-   0.638774600s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="01store_fault"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-bda086707275804e/bin-01store_fault`
+   0.358333752s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="01store_fault"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "01store_fault", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/01store_fault.rs", Edition2021) }
+   0.358370622s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="01store_fault"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-bda086707275804e/bin-01store_fault`
 
 Caused by:
     No such file or directory (os error 2)
@@ -1647,8 +1647,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.639025216s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="01store_fault"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "01store_fault", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/01store_fault.rs", Edition2021) }
-   0.639051586s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="01store_fault"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-9e0f0b36ddf617c9/test-bin-01store_fault`
+   0.358729514s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="01store_fault"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "01store_fault", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/01store_fault.rs", Edition2021) }
+   0.358742559s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="01store_fault"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-9e0f0b36ddf617c9/test-bin-01store_fault`
 
 Caused by:
     No such file or directory (os error 2)
@@ -1692,8 +1692,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.639314897s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="02power"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "02power", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/02power.rs", Edition2021) }
-   0.639341578s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="02power"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-80f94c0d8c588d29/bin-02power`
+   0.359234664s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="02power"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "02power", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/02power.rs", Edition2021) }
+   0.359271384s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="02power"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-80f94c0d8c588d29/bin-02power`
 
 Caused by:
     No such file or directory (os error 2)
@@ -1737,8 +1737,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.639609006s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="02power"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "02power", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/02power.rs", Edition2021) }
-   0.639635657s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="02power"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-3c7be74e69d267b4/test-bin-02power`
+   0.359649353s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="02power"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "02power", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/02power.rs", Edition2021) }
+   0.359685000s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="02power"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-3c7be74e69d267b4/test-bin-02power`
 
 Caused by:
     No such file or directory (os error 2)
@@ -1782,8 +1782,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.639999729s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="03priv_inst"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "03priv_inst", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/03priv_inst.rs", Edition2021) }
-   0.640038883s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="03priv_inst"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-ec31df6a0d3a1e49/bin-03priv_inst`
+   0.360320799s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="03priv_inst"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "03priv_inst", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/03priv_inst.rs", Edition2021) }
+   0.360357399s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="03priv_inst"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-ec31df6a0d3a1e49/bin-03priv_inst`
 
 Caused by:
     No such file or directory (os error 2)
@@ -1827,8 +1827,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.640352158s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="03priv_inst"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "03priv_inst", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/03priv_inst.rs", Edition2021) }
-   0.640379090s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="03priv_inst"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-fcefebc5c639d2c9/test-bin-03priv_inst`
+   0.360744063s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="03priv_inst"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "03priv_inst", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/03priv_inst.rs", Edition2021) }
+   0.360779962s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="03priv_inst"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-fcefebc5c639d2c9/test-bin-03priv_inst`
 
 Caused by:
     No such file or directory (os error 2)
@@ -1872,8 +1872,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.640672998s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="04priv_csr"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "04priv_csr", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/04priv_csr.rs", Edition2021) }
-   0.640702314s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="04priv_csr"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-55f489a079e9caed/bin-04priv_csr`
+   0.361131750s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="04priv_csr"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "04priv_csr", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/04priv_csr.rs", Edition2021) }
+   0.361172307s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="04priv_csr"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-55f489a079e9caed/bin-04priv_csr`
 
 Caused by:
     No such file or directory (os error 2)
@@ -1917,8 +1917,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.641021621s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="04priv_csr"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "04priv_csr", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/04priv_csr.rs", Edition2021) }
-   0.641048632s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="04priv_csr"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-4f6c4939d0d0a74c/test-bin-04priv_csr`
+   0.361576997s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="04priv_csr"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "04priv_csr", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/04priv_csr.rs", Edition2021) }
+   0.361611863s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="04priv_csr"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-4f6c4939d0d0a74c/test-bin-04priv_csr`
 
 Caused by:
     No such file or directory (os error 2)
@@ -1962,8 +1962,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.641329105s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="05write_a"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "05write_a", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/05write_a.rs", Edition2021) }
-   0.641355375s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="05write_a"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-cd7a0d01a6828513/bin-05write_a`
+   0.361949054s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="05write_a"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "05write_a", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/05write_a.rs", Edition2021) }
+   0.361986445s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="05write_a"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-cd7a0d01a6828513/bin-05write_a`
 
 Caused by:
     No such file or directory (os error 2)
@@ -2007,8 +2007,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.641596464s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="05write_a"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "05write_a", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/05write_a.rs", Edition2021) }
-   0.641622503s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="05write_a"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-cae72e791dd647d2/test-bin-05write_a`
+   0.362377909s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="05write_a"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "05write_a", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/05write_a.rs", Edition2021) }
+   0.362408517s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="05write_a"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-cae72e791dd647d2/test-bin-05write_a`
 
 Caused by:
     No such file or directory (os error 2)
@@ -2052,8 +2052,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.641885092s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="06write_b"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "06write_b", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/06write_b.rs", Edition2021) }
-   0.641910851s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="06write_b"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-ce1fd8c76081388c/bin-06write_b`
+   0.362721763s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="06write_b"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "06write_b", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/06write_b.rs", Edition2021) }
+   0.362754785s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="06write_b"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-ce1fd8c76081388c/bin-06write_b`
 
 Caused by:
     No such file or directory (os error 2)
@@ -2097,8 +2097,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.642241470s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="06write_b"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "06write_b", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/06write_b.rs", Edition2021) }
-   0.642274913s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="06write_b"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-031e234a2e8dce45/test-bin-06write_b`
+   0.363105612s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="06write_b"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "06write_b", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/06write_b.rs", Edition2021) }
+   0.363147211s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="06write_b"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-031e234a2e8dce45/test-bin-06write_b`
 
 Caused by:
     No such file or directory (os error 2)
@@ -2142,8 +2142,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.642514448s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="07write_c"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "07write_c", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/07write_c.rs", Edition2021) }
-   0.642540738s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="07write_c"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-9fc0be7984142fe1/bin-07write_c`
+   0.363714870s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="07write_c"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "07write_c", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/07write_c.rs", Edition2021) }
+   0.363760988s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="07write_c"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-9fc0be7984142fe1/bin-07write_c`
 
 Caused by:
     No such file or directory (os error 2)
@@ -2187,8 +2187,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.642820821s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="07write_c"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "07write_c", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/07write_c.rs", Edition2021) }
-   0.642845878s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="07write_c"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-5995574d59a103d6/test-bin-07write_c`
+   0.364173622s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="07write_c"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "07write_c", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/07write_c.rs", Edition2021) }
+   0.364213969s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="07write_c"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-5995574d59a103d6/test-bin-07write_c`
 
 Caused by:
     No such file or directory (os error 2)
@@ -2232,8 +2232,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.643091806s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="08power_3"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "08power_3", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/08power_3.rs", Edition2021) }
-   0.643117725s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="08power_3"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-9817c81c53e2d70a/bin-08power_3`
+   0.364570968s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="08power_3"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "08power_3", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/08power_3.rs", Edition2021) }
+   0.364599332s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="08power_3"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-9817c81c53e2d70a/bin-08power_3`
 
 Caused by:
     No such file or directory (os error 2)
@@ -2277,8 +2277,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.643335599s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="08power_3"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "08power_3", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/08power_3.rs", Edition2021) }
-   0.643362590s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="08power_3"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-72622ab4c0645da6/test-bin-08power_3`
+   0.364898410s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="08power_3"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "08power_3", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/08power_3.rs", Edition2021) }
+   0.364939508s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="08power_3"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-72622ab4c0645da6/test-bin-08power_3`
 
 Caused by:
     No such file or directory (os error 2)
@@ -2322,8 +2322,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.643610472s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="09power_5"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "09power_5", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/09power_5.rs", Edition2021) }
-   0.643635910s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="09power_5"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-7f44e0c82fc99ed1/bin-09power_5`
+   0.365264456s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="09power_5"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "09power_5", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/09power_5.rs", Edition2021) }
+   0.365293180s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="09power_5"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-7f44e0c82fc99ed1/bin-09power_5`
 
 Caused by:
     No such file or directory (os error 2)
@@ -2367,8 +2367,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.643932444s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="09power_5"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "09power_5", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/09power_5.rs", Edition2021) }
-   0.643961609s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="09power_5"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-5413a2de4343a4f6/test-bin-09power_5`
+   0.365606696s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="09power_5"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "09power_5", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/09power_5.rs", Edition2021) }
+   0.365634720s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="09power_5"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-5413a2de4343a4f6/test-bin-09power_5`
 
 Caused by:
     No such file or directory (os error 2)
@@ -2412,8 +2412,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.644195924s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="10power_7"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "10power_7", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/10power_7.rs", Edition2021) }
-   0.644222615s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="10power_7"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-d9dc5a48b3f562ba/bin-10power_7`
+   0.365884685s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="10power_7"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "10power_7", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/10power_7.rs", Edition2021) }
+   0.365917567s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="10power_7"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-d9dc5a48b3f562ba/bin-10power_7`
 
 Caused by:
     No such file or directory (os error 2)
@@ -2457,8 +2457,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.644564615s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="10power_7"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "10power_7", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/10power_7.rs", Edition2021) }
-   0.644591056s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="10power_7"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-738a9fe599c821eb/test-bin-10power_7`
+   0.366166591s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="10power_7"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "10power_7", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/10power_7.rs", Edition2021) }
+   0.366193672s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="10power_7"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-738a9fe599c821eb/test-bin-10power_7`
 
 Caused by:
     No such file or directory (os error 2)
@@ -2502,8 +2502,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.644925131s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="11sleep"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "11sleep", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/11sleep.rs", Edition2021) }
-   0.644951791s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="11sleep"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-c7b626df040b2b3c/bin-11sleep`
+   0.366500676s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="11sleep"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "11sleep", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/11sleep.rs", Edition2021) }
+   0.366531915s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="11sleep"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-c7b626df040b2b3c/bin-11sleep`
 
 Caused by:
     No such file or directory (os error 2)
@@ -2547,8 +2547,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.645310002s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="11sleep"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "11sleep", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/11sleep.rs", Edition2021) }
-   0.645339007s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="11sleep"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-e94cd974e6ad2304/test-bin-11sleep`
+   0.366913631s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="11sleep"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "11sleep", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/11sleep.rs", Edition2021) }
+   0.366956592s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="11sleep"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-e94cd974e6ad2304/test-bin-11sleep`
 
 Caused by:
     No such file or directory (os error 2)
@@ -2592,8 +2592,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.645653205s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="12forktest"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "12forktest", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/12forktest.rs", Edition2021) }
-   0.645680306s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="12forktest"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-5198bf5de16b1329/bin-12forktest`
+   0.367253106s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="12forktest"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "12forktest", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/12forktest.rs", Edition2021) }
+   0.367269998s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="12forktest"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-5198bf5de16b1329/bin-12forktest`
 
 Caused by:
     No such file or directory (os error 2)
@@ -2637,8 +2637,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.646241272s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="12forktest"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "12forktest", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/12forktest.rs", Edition2021) }
-   0.646284525s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="12forktest"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-8e85ebb2979f6f4c/test-bin-12forktest`
+   0.367786740s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="12forktest"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "12forktest", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/12forktest.rs", Edition2021) }
+   0.367820535s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="12forktest"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-8e85ebb2979f6f4c/test-bin-12forktest`
 
 Caused by:
     No such file or directory (os error 2)
@@ -2682,8 +2682,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.646786138s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="13forktree"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "13forktree", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/13forktree.rs", Edition2021) }
-   0.646809452s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="13forktree"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-23ffe144cafbdca7/bin-13forktree`
+   0.368194365s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="13forktree"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "13forktree", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/13forktree.rs", Edition2021) }
+   0.368240072s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="13forktree"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-23ffe144cafbdca7/bin-13forktree`
 
 Caused by:
     No such file or directory (os error 2)
@@ -2727,8 +2727,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.647614989s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="13forktree"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "13forktree", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/13forktree.rs", Edition2021) }
-   0.647645768s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="13forktree"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-50fa9488daf35938/test-bin-13forktree`
+   0.368678996s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="13forktree"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "13forktree", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/13forktree.rs", Edition2021) }
+   0.368715957s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="13forktree"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-50fa9488daf35938/test-bin-13forktree`
 
 Caused by:
     No such file or directory (os error 2)
@@ -2772,8 +2772,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.648044917s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="14forktest2"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "14forktest2", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/14forktest2.rs", Edition2021) }
-   0.648076216s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="14forktest2"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-7bcfa1adb5aad354/bin-14forktest2`
+   0.369084317s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="14forktest2"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "14forktest2", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/14forktest2.rs", Edition2021) }
+   0.369119744s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="14forktest2"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-7bcfa1adb5aad354/bin-14forktest2`
 
 Caused by:
     No such file or directory (os error 2)
@@ -2817,8 +2817,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.648457862s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="14forktest2"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "14forktest2", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/14forktest2.rs", Edition2021) }
-   0.648489502s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="14forktest2"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-84350fbccdc8bd81/test-bin-14forktest2`
+   0.369572254s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="14forktest2"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "14forktest2", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/14forktest2.rs", Edition2021) }
+   0.369600438s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="14forktest2"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-84350fbccdc8bd81/test-bin-14forktest2`
 
 Caused by:
     No such file or directory (os error 2)
@@ -2862,8 +2862,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.648920982s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="15matrix"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "15matrix", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/15matrix.rs", Edition2021) }
-   0.648953173s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="15matrix"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-60f6f966d6cd584b/bin-15matrix`
+   0.369891331s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="15matrix"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "15matrix", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/15matrix.rs", Edition2021) }
+   0.369924253s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="15matrix"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-60f6f966d6cd584b/bin-15matrix`
 
 Caused by:
     No such file or directory (os error 2)
@@ -2907,8 +2907,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.649331537s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="15matrix"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "15matrix", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/15matrix.rs", Edition2021) }
-   0.649359871s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="15matrix"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-6bc7269fafacee32/test-bin-15matrix`
+   0.370311930s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="15matrix"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "15matrix", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/15matrix.rs", Edition2021) }
+   0.370336988s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="15matrix"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-6bc7269fafacee32/test-bin-15matrix`
 
 Caused by:
     No such file or directory (os error 2)
@@ -2952,8 +2952,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.649642778s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="cat_filea"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "cat_filea", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/cat_filea.rs", Edition2021) }
-   0.649669309s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="cat_filea"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-67bf4436144ebd3f/bin-cat_filea`
+   0.370612141s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="cat_filea"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "cat_filea", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/cat_filea.rs", Edition2021) }
+   0.370645684s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="cat_filea"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-67bf4436144ebd3f/bin-cat_filea`
 
 Caused by:
     No such file or directory (os error 2)
@@ -2997,8 +2997,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.649958128s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="cat_filea"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "cat_filea", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/cat_filea.rs", Edition2021) }
-   0.649984217s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="cat_filea"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-52ea512256a228b1/test-bin-cat_filea`
+   0.371006741s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="cat_filea"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "cat_filea", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/cat_filea.rs", Edition2021) }
+   0.371037740s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="cat_filea"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-52ea512256a228b1/test-bin-cat_filea`
 
 Caused by:
     No such file or directory (os error 2)
@@ -3042,8 +3042,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.650258549s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="filetest_simple"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "filetest_simple", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/filetest_simple.rs", Edition2021) }
-   0.650284117s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="filetest_simple"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-e57e332956f59f65/bin-filetest_simple`
+   0.371385330s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="filetest_simple"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "filetest_simple", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/filetest_simple.rs", Edition2021) }
+   0.371419646s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="filetest_simple"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-e57e332956f59f65/bin-filetest_simple`
 
 Caused by:
     No such file or directory (os error 2)
@@ -3087,8 +3087,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.650537439s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="filetest_simple"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "filetest_simple", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/filetest_simple.rs", Edition2021) }
-   0.650563829s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="filetest_simple"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-721bf2b86c757a91/test-bin-filetest_simple`
+   0.371763138s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="filetest_simple"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "filetest_simple", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/filetest_simple.rs", Edition2021) }
+   0.371794688s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="filetest_simple"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-721bf2b86c757a91/test-bin-filetest_simple`
 
 Caused by:
     No such file or directory (os error 2)
@@ -3132,8 +3132,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.650809536s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="initproc"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "initproc", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/initproc.rs", Edition2021) }
-   0.650834153s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="initproc"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-0d370383e972e237/bin-initproc`
+   0.372393336s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="initproc"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "initproc", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/initproc.rs", Edition2021) }
+   0.372428954s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="initproc"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-0d370383e972e237/bin-initproc`
 
 Caused by:
     No such file or directory (os error 2)
@@ -3177,8 +3177,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.651079439s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="initproc"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "initproc", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/initproc.rs", Edition2021) }
-   0.651105168s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="initproc"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-912cc52e4715d83a/test-bin-initproc`
+   0.372794589s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="initproc"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "initproc", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/initproc.rs", Edition2021) }
+   0.372826700s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="initproc"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-912cc52e4715d83a/test-bin-initproc`
 
 Caused by:
     No such file or directory (os error 2)
@@ -3222,8 +3222,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.651389148s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="mpsc_sem"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "mpsc_sem", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/mpsc_sem.rs", Edition2021) }
-   0.651416229s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="mpsc_sem"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-0df218307816e04d/bin-mpsc_sem`
+   0.373238653s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="mpsc_sem"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "mpsc_sem", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/mpsc_sem.rs", Edition2021) }
+   0.373270293s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="mpsc_sem"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-0df218307816e04d/bin-mpsc_sem`
 
 Caused by:
     No such file or directory (os error 2)
@@ -3267,8 +3267,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.651662147s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="mpsc_sem"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "mpsc_sem", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/mpsc_sem.rs", Edition2021) }
-   0.651687856s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="mpsc_sem"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-af3353f7a1ae1665/test-bin-mpsc_sem`
+   0.373635237s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="mpsc_sem"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "mpsc_sem", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/mpsc_sem.rs", Edition2021) }
+   0.373667729s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="mpsc_sem"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-af3353f7a1ae1665/test-bin-mpsc_sem`
 
 Caused by:
     No such file or directory (os error 2)
@@ -3312,8 +3312,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.651944904s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="race_adder_mutex_blocking"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "race_adder_mutex_blocking", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/race_adder_mutex_blocking.rs", Edition2021) }
-   0.651972166s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="race_adder_mutex_blocking"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-bd025353c8736750/bin-race_adder_mutex_blocking`
+   0.374042541s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="race_adder_mutex_blocking"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "race_adder_mutex_blocking", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/race_adder_mutex_blocking.rs", Edition2021) }
+   0.374073961s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="race_adder_mutex_blocking"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-bd025353c8736750/bin-race_adder_mutex_blocking`
 
 Caused by:
     No such file or directory (os error 2)
@@ -3357,8 +3357,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.652214026s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="race_adder_mutex_blocking"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "race_adder_mutex_blocking", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/race_adder_mutex_blocking.rs", Edition2021) }
-   0.652222622s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="race_adder_mutex_blocking"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-5edec690c31a01a9/test-bin-race_adder_mutex_blocking`
+   0.374546980s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="race_adder_mutex_blocking"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "race_adder_mutex_blocking", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/race_adder_mutex_blocking.rs", Edition2021) }
+   0.374561217s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="race_adder_mutex_blocking"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-5edec690c31a01a9/test-bin-race_adder_mutex_blocking`
 
 Caused by:
     No such file or directory (os error 2)
@@ -3402,8 +3402,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.652484230s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_ctrlc"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "sig_ctrlc", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/sig_ctrlc.rs", Edition2021) }
-   0.652492706s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_ctrlc"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-b0c75f08889b31c6/bin-sig_ctrlc`
+   0.374887146s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_ctrlc"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "sig_ctrlc", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/sig_ctrlc.rs", Edition2021) }
+   0.374929296s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_ctrlc"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-b0c75f08889b31c6/bin-sig_ctrlc`
 
 Caused by:
     No such file or directory (os error 2)
@@ -3447,8 +3447,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.652784370s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_ctrlc"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "sig_ctrlc", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/sig_ctrlc.rs", Edition2021) }
-   0.652809879s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_ctrlc"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-2f6979062b205b04/test-bin-sig_ctrlc`
+   0.375451990s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_ctrlc"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "sig_ctrlc", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/sig_ctrlc.rs", Edition2021) }
+   0.375491695s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_ctrlc"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-2f6979062b205b04/test-bin-sig_ctrlc`
 
 Caused by:
     No such file or directory (os error 2)
@@ -3492,8 +3492,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.653058972s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_simple"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "sig_simple", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/sig_simple.rs", Edition2021) }
-   0.653085462s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_simple"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-1e9f78b2c6d268a7/bin-sig_simple`
+   0.375869053s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_simple"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "sig_simple", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/sig_simple.rs", Edition2021) }
+   0.375908959s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_simple"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-1e9f78b2c6d268a7/bin-sig_simple`
 
 Caused by:
     No such file or directory (os error 2)
@@ -3537,8 +3537,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.653328254s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_simple"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "sig_simple", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/sig_simple.rs", Edition2021) }
-   0.653354624s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_simple"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-f11788b78ce059fb/test-bin-sig_simple`
+   0.376284653s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_simple"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "sig_simple", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/sig_simple.rs", Edition2021) }
+   0.376320190s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_simple"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-f11788b78ce059fb/test-bin-sig_simple`
 
 Caused by:
     No such file or directory (os error 2)
@@ -3582,8 +3582,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.653607575s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_simple2"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "sig_simple2", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/sig_simple2.rs", Edition2021) }
-   0.653638063s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_simple2"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-dc098bc4d20c55ef/bin-sig_simple2`
+   0.376696416s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_simple2"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "sig_simple2", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/sig_simple2.rs", Edition2021) }
+   0.376737854s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_simple2"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-dc098bc4d20c55ef/bin-sig_simple2`
 
 Caused by:
     No such file or directory (os error 2)
@@ -3627,8 +3627,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.653897296s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_simple2"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "sig_simple2", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/sig_simple2.rs", Edition2021) }
-   0.653923906s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_simple2"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-ac1d473851500a9a/test-bin-sig_simple2`
+   0.377188511s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_simple2"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "sig_simple2", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/sig_simple2.rs", Edition2021) }
+   0.377231753s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_simple2"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-ac1d473851500a9a/test-bin-sig_simple2`
 
 Caused by:
     No such file or directory (os error 2)
@@ -3672,8 +3672,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.654153763s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_tests"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "sig_tests", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/sig_tests.rs", Edition2021) }
-   0.654180714s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_tests"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-43278e22e857ed15/bin-sig_tests`
+   0.377661260s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_tests"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "sig_tests", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/sig_tests.rs", Edition2021) }
+   0.377945780s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_tests"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-43278e22e857ed15/bin-sig_tests`
 
 Caused by:
     No such file or directory (os error 2)
@@ -3717,8 +3717,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.654407776s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_tests"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "sig_tests", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/sig_tests.rs", Edition2021) }
-   0.654439366s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_tests"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-e6b9dc91e0a87e9f/test-bin-sig_tests`
+   0.378764582s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_tests"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "sig_tests", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/sig_tests.rs", Edition2021) }
+   0.378782205s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sig_tests"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-e6b9dc91e0a87e9f/test-bin-sig_tests`
 
 Caused by:
     No such file or directory (os error 2)
@@ -3762,8 +3762,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.654739216s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sync_sem"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "sync_sem", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/sync_sem.rs", Edition2021) }
-   0.654764965s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sync_sem"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-0f4503be4fcfdbd2/bin-sync_sem`
+   0.379273659s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sync_sem"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "sync_sem", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/sync_sem.rs", Edition2021) }
+   0.379312293s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sync_sem"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-0f4503be4fcfdbd2/bin-sync_sem`
 
 Caused by:
     No such file or directory (os error 2)
@@ -3807,8 +3807,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.655010121s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sync_sem"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "sync_sem", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/sync_sem.rs", Edition2021) }
-   0.655035820s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sync_sem"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-65d27ec278f58b4e/test-bin-sync_sem`
+   0.379710189s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sync_sem"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "sync_sem", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/sync_sem.rs", Edition2021) }
+   0.379748692s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="sync_sem"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-65d27ec278f58b4e/test-bin-sync_sem`
 
 Caused by:
     No such file or directory (os error 2)
@@ -3852,8 +3852,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.655301515s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="test_condvar"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "test_condvar", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/test_condvar.rs", Edition2021) }
-   0.655329057s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="test_condvar"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-ff9405adb9003308/bin-test_condvar`
+   0.380125378s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="test_condvar"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "test_condvar", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/test_condvar.rs", Edition2021) }
+   0.380206412s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="test_condvar"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-ff9405adb9003308/bin-test_condvar`
 
 Caused by:
     No such file or directory (os error 2)
@@ -3897,8 +3897,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.655578892s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="test_condvar"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "test_condvar", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/test_condvar.rs", Edition2021) }
-   0.655603469s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="test_condvar"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-3fcbe67a6ccad9e9/test-bin-test_condvar`
+   0.381515977s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="test_condvar"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "test_condvar", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/test_condvar.rs", Edition2021) }
+   0.381580730s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="test_condvar"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-3fcbe67a6ccad9e9/test-bin-test_condvar`
 
 Caused by:
     No such file or directory (os error 2)
@@ -3942,8 +3942,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.655889392s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="threads"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "threads", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/threads.rs", Edition2021) }
-   0.655917255s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="threads"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-93a9290bcdd2a999/bin-threads`
+   0.382220000s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="threads"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "threads", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/threads.rs", Edition2021) }
+   0.382261709s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="threads"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-93a9290bcdd2a999/bin-threads`
 
 Caused by:
     No such file or directory (os error 2)
@@ -3987,8 +3987,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.656190865s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="threads"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "threads", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/threads.rs", Edition2021) }
-   0.656217837s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="threads"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-0009a84542e7dcb6/test-bin-threads`
+   0.382847407s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="threads"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "threads", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/threads.rs", Edition2021) }
+   0.382888946s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="threads"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-0009a84542e7dcb6/test-bin-threads`
 
 Caused by:
     No such file or directory (os error 2)
@@ -4032,8 +4032,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.656461109s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="threads_arg"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "threads_arg", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/threads_arg.rs", Edition2021) }
-   0.656487189s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="threads_arg"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-95daac7896d46644/bin-threads_arg`
+   0.383306510s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="threads_arg"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "threads_arg", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/threads_arg.rs", Edition2021) }
+   0.383347678s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="threads_arg"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-95daac7896d46644/bin-threads_arg`
 
 Caused by:
     No such file or directory (os error 2)
@@ -4077,8 +4077,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.656749808s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="threads_arg"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "threads_arg", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/threads_arg.rs", Edition2021) }
-   0.656776048s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="threads_arg"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-cdf7c71e8aca8a08/test-bin-threads_arg`
+   0.383854862s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="threads_arg"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "threads_arg", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/threads_arg.rs", Edition2021) }
+   0.383888356s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="threads_arg"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-cdf7c71e8aca8a08/test-bin-threads_arg`
 
 Caused by:
     No such file or directory (os error 2)
@@ -4122,8 +4122,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.657085506s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="user_shell"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "user_shell", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/user_shell.rs", Edition2021) }
-   0.657111175s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="user_shell"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-3b400c640bcba767/bin-user_shell`
+   0.384266294s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="user_shell"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: false }/TargetInner { name: "user_shell", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/user_shell.rs", Edition2021) }
+   0.384303144s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="user_shell"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-3b400c640bcba767/bin-user_shell`
 
 Caused by:
     No such file or directory (os error 2)
@@ -4167,8 +4167,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.657347975s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="user_shell"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "user_shell", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/user_shell.rs", Edition2021) }
-   0.657375076s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="user_shell"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-3548c2e124b60e32/test-bin-user_shell`
+   0.384852759s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="user_shell"}: cargo::core::compiler::fingerprint: fingerprint error for user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)/Check { test: true }/TargetInner { name: "user_shell", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/user/src/bin/user_shell.rs", Edition2021) }
+   0.384893396s  INFO prepare_target{force=false package_id=user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user) target="user_shell"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/user_lib-3548c2e124b60e32/test-bin-user_shell`
 
 Caused by:
     No such file or directory (os error 2)
@@ -4212,8 +4212,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.658811486s  INFO prepare_target{force=false package_id=xtask v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/xtask) target="xtask"}: cargo::core::compiler::fingerprint: fingerprint error for xtask v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/xtask)/Check { test: false }/TargetInner { name: "xtask", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/xtask/src/main.rs", Edition2021) }
-   0.658839179s  INFO prepare_target{force=false package_id=xtask v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/xtask) target="xtask"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/xtask-c08e7b51856c9f2c/bin-xtask`
+   0.392294249s  INFO prepare_target{force=false package_id=xtask v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/xtask) target="xtask"}: cargo::core::compiler::fingerprint: fingerprint error for xtask v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/xtask)/Check { test: false }/TargetInner { name: "xtask", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/xtask/src/main.rs", Edition2021) }
+   0.392352921s  INFO prepare_target{force=false package_id=xtask v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/xtask) target="xtask"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/xtask-c08e7b51856c9f2c/bin-xtask`
 
 Caused by:
     No such file or directory (os error 2)
@@ -4257,8 +4257,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:392:3
   26: <unknown>
-   0.668253530s  INFO prepare_target{force=false package_id=xtask v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/xtask) target="xtask"}: cargo::core::compiler::fingerprint: fingerprint error for xtask v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/xtask)/Check { test: true }/TargetInner { name: "xtask", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/xtask/src/main.rs", Edition2021) }
-   0.668280271s  INFO prepare_target{force=false package_id=xtask v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/xtask) target="xtask"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/xtask-daf88ac3e8ea9ef8/test-bin-xtask`
+   0.404044724s  INFO prepare_target{force=false package_id=xtask v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/xtask) target="xtask"}: cargo::core::compiler::fingerprint: fingerprint error for xtask v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/xtask)/Check { test: true }/TargetInner { name: "xtask", doc: true, ..: with_path("/home/xu-hy22/Graduation/phase-b/candidate-template/xtask/src/main.rs", Edition2021) }
+   0.404106933s  INFO prepare_target{force=false package_id=xtask v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/xtask) target="xtask"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/xu-hy22/Graduation/phase-b/candidate-template/target/debug/.fingerprint/xtask-daf88ac3e8ea9ef8/test-bin-xtask`
 
 Caused by:
     No such file or directory (os error 2)
@@ -4304,24 +4304,24 @@ Stack backtrace:
   26: <unknown>
     Checking sbi-rt v0.0.2
     Checking user_lib v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/user)
-   Compiling ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3)
    Compiling ch4 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch4)
-   Compiling ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2)
-   Compiling ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8)
+   Compiling ch3 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch3)
    Compiling ch6 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch6)
-   Compiling ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7)
    Compiling ch5 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch5)
+   Compiling ch7 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch7)
+   Compiling ch8 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch8)
+   Compiling ch2 v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/ch2)
     Checking xtask v0.0.1 (/home/xu-hy22/Graduation/phase-b/candidate-template/xtask)
-error: could not compile `user_lib` (lib) due to 24 previous errors; 2 warnings emitted
-warning: build failed, waiting for other jobs to finish...
-error: could not compile `ch6` (build script) due to 1 previous error
-error: could not compile `ch4` (build script) due to 1 previous error
-error: could not compile `sbi-rt` (lib) due to 43 previous errors
-error: could not compile `ch7` (build script) due to 1 previous error
-error: could not compile `ch2` (build script) due to 1 previous error
 error: could not compile `ch3` (build script) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `ch2` (build script) due to 1 previous error
 error: could not compile `ch5` (build script) due to 1 previous error
+error: could not compile `ch6` (build script) due to 1 previous error
 error: could not compile `ch8` (build script) due to 1 previous error
+error: could not compile `ch7` (build script) due to 1 previous error
+error: could not compile `sbi-rt` (lib) due to 43 previous errors
+error: could not compile `ch4` (build script) due to 1 previous error
+error: could not compile `user_lib` (lib) due to 24 previous errors; 2 warnings emitted
 error: could not compile `user_lib` (lib test) due to 24 previous errors; 2 warnings emitted
-error: could not compile `xtask` (bin "xtask" test) due to 1 previous error
 error: could not compile `xtask` (bin "xtask") due to 1 previous error
+error: could not compile `xtask` (bin "xtask" test) due to 1 previous error
