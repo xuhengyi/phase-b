@@ -1,87 +1,66 @@
-# Phase B 实验骨架
+# Phase B: Spec-to-Rust-OS
 
-`/home/xu-hy22/Graduation/phase-b/` 是当前唯一保留的 Phase B 实验目录，用于承载 “spec -> crate 实现 -> 测试反馈迭代”。
+这个仓库保存了一条教学操作系统生成链路：从结构化 spec 出发，生成 Rust crate 实现，运行基础 crate 单元测试与章节级 `cargo qemu --ch N` 判题，再把失败摘要回喂给下一轮生成。
 
-## 目录
+## 仓库内容
 
-- `candidate-template/`
-  - Phase B 候选工作区模板。
-  - 保留 workspace 配置、各 crate 的 `Cargo.toml`、`build.rs`、模块树和空实现文件。
-  - `user/` 与 `xtask/` 直接迁移，作为运行基础设施，不纳入 AI 重建范围。
-- `oracle-tests/`
-  - 基础 crate 的 host-runnable unit tests。
-  - `install_oracle_tests.sh` 负责把 `unit/` 下的测试安装到 trial workspace。
-- `spec/`
-  - 冻结后的 spec 根目录。
-  - 自动化直接读取 `spec/project.md` 和 `spec/specs/*`。
-  - 每个 capability 目录可以包含 `spec.md`、`design.md`、`autogen.yaml`；聚合 spec 的子 capability 会由 `autogen.yaml` 自动扩展进 prompt。
-- `trial-workspaces/`
-  - 每次实验从模板复制出的独立工作区。
-- `artifacts/`
-  - 实验日志、失败摘要、指标和截图。
 - `agent/`
-  - 自动化执行层，负责模型 API 调用、coding CLI 退阶调用、判题与失败反馈重试。
+  - 自动化执行层，负责模型 API 调用、外部 coding CLI 编排、判题和失败反馈重试。
+- `candidate-template/`
+  - 生成前的空工作区模板，保留 workspace 结构、`Cargo.toml`、模块树和必要配置。
+- `oracle-tests/`
+  - 可注入到 trial workspace 的基础 crate 单元测试，以及安装脚本。
+- `spec/`
+  - 项目级和 crate 级规格输入。
+- `trial-workspaces/generated-rust-os/`
+  - 当前保留下来的生成产物源码工作区。
+- `artifacts/`
+  - 本地运行时输出目录，默认不提交日志、metrics 等过程产物。
 
-## 自动化流程
+## 项目目标
 
-当前自动化实现的是一个闭环，而不是一次性生成：
+目标不是“一次性吐出代码”，而是一条可复现的闭环：
 
-1. `init-trial`
-   - 从 `candidate-template/` 复制出 `trial-workspaces/<trial>/`。
-   - 自动安装 oracle unit tests。
-2. `run-api-crate` 或 `run-coding-crate`
-   - 读取当前 crate spec、依赖 spec、oracle tests、当前文件快照。
-   - 调模型 API 或外部 `coding` CLI 生成实现。
-   - 基础 crate 跑 `cargo check` 和 `cargo test`。
-   - 章节 crate 跑 `cargo check` 和 `cargo qemu --ch N`。
-   - 将失败日志压缩成摘要，再反馈给下一轮。
-3. `run-api-phase` 或 `run-coding-phase`
-   - 按 crate 顺序重复上面的循环。
-4. `run-pretest`
-   - 在基础 crate 和章节 crate 通过后执行 `cargo pretest`。
+1. 从 `spec/` 读取项目级和 crate 级规范。
+2. 从 `candidate-template/` 初始化空工作区。
+3. 安装 `oracle-tests/` 中的基础 crate 单元测试。
+4. 生成实现并执行 `cargo check` / `cargo test` / `cargo qemu --ch N`。
+5. 汇总失败摘要并继续迭代。
+6. 最终以 `cargo pretest` 和用户态测例作为端到端验证。
 
-ch5-ch8 的章节判题已经使用交互式 PTY runner，会自动在 shell 中输入用户测例名。
-因此，Codex CLI 长跑时不需要你再人工往终端输入测例名。
+## 快速开始
 
-## 常用命令
+### 查看当前生成产物
 
 ```bash
-cd /home/xu-hy22/Graduation/phase-b
+cd trial-workspaces/generated-rust-os
 
+cargo test -p linker
+cargo test -p kernel-alloc
+cargo test -p easy-fs
+```
+
+前两个命令可以作为当前公开工作区的最小冒烟检查；`easy-fs` 代表当前尚未解决的阻塞点。
+
+### 新建一个 trial workspace
+
+```bash
 python3 -m agent.cli init-trial trial-01
-python3 -m agent.cli run-api-phase trial-01 syscall
-python3 -m agent.cli run-coding-phase trial-01 ch5
-python3 -m agent.cli run-all trial-01 --mode coding --through ch8
-python3 -m agent.cli resume trial-01
-python3 -m agent.cli report trial-01
-python3 -m agent.cli run-pretest trial-01
-
-# 直接用 Codex CLI 完整跑到 ch8
-python3 -m agent.cli --config agent/manifests/codex.toml run-all trial-codex --mode coding --through ch8
-./resume_codex_trial.sh trial-codex
-
-# 后台运行
-./run_codex_all_bg.sh trial-codex ch8
 ```
-
-长跑过程中常用的查看命令：
+### 跑完整链路
 
 ```bash
-cd /home/xu-hy22/Graduation/phase-b
-
-tail -f artifacts/logs/trial-codex.codex.nohup.log
-python3 -m agent.cli report trial-codex
-python3 -m agent.cli report trial-codex --json
-cat trial-workspaces/trial-codex/.rebuild/state.json
-ls trial-workspaces/trial-codex/.rebuild/reports
+python3 -m agent.cli run-all trial-01 --mode coding --through ch8
+python3 -m agent.cli run-pretest trial-01
 ```
 
-包装脚本：
+## 环境要求
 
-- `./run_api_trial.sh <trial> <target-crate>`
-- `./run_coding_trial.sh <trial> <target-crate>`
-- `./run_codex_trial.sh <trial> <target-crate>`
-- `./resume_codex_trial.sh <trial>`
-- `./run_codex_all_bg.sh <trial> [target-crate]`
-
-更多细节见 [agent/README.md](/home/xu-hy22/Graduation/phase-b/agent/README.md)。
+- Python 3.11 或更新版本
+- Rust stable 工具链
+  - 具体 target 和 components 见 `trial-workspaces/generated-rust-os/rust-toolchain.toml`
+- 支持 `cargo qemu` / `cargo pretest` 的宿主环境
+  - 包括 QEMU 和该教学 OS 所需依赖
+- 如果要运行生成链路：
+  - 一个 OpenAI-compatible API key，例如 `OPENAI_API_KEY`
+  - 或一个可替换 `coding_cli.command` 的外部 coding CLI

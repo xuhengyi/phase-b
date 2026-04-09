@@ -1,8 +1,15 @@
 __pycache__/
 *.pyc
 
+candidate-template/target/
+
 artifacts/*
-!artifacts/README.md
+!artifacts/logs/
+!artifacts/logs/.gitkeep
+!artifacts/metrics/
+!artifacts/metrics/.gitkeep
 
 trial-workspaces/*
-!trial-workspaces/README.md
+!trial-workspaces/generated-rust-os/
+trial-workspaces/generated-rust-os/.rebuild/
+trial-workspaces/generated-rust-os/target/
