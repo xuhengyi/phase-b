@@ -16,6 +16,10 @@
   - 当前保留下来的生成产物源码工作区。
 - `artifacts/`
   - 本地运行时输出目录，默认不提交日志、metrics 等过程产物。
+- `experiments/v2/`
+  - V2 紧凑 RustOS 章节快照、`spec-v2`、生成 bundle 和共享用户态测例。
+- `docs/v2-rustos-lineage.md`
+  - 记录 V2 尝试和本仓库正式 Rust 生成链路的关系。
 
 ## 项目目标
 
@@ -27,6 +31,17 @@
 4. 生成实现并执行 `cargo check` / `cargo test` / `cargo qemu --ch N`。
 5. 汇总失败摘要并继续迭代。
 6. 最终以 `cargo pretest` 和用户态测例作为端到端验证。
+
+## V2 尝试
+
+`experiments/v2/` 中保留了一套按 `spec-v2` 和章节 bundle 生成的 RustOS
+`ch2` 到 `ch8` QEMU/RISC-V 章节快照。它们是论文一致性实验的 V2
+证据，用于说明中性 spec 可以驱动紧凑 RustOS 实现通过共同 base 测例；本仓库
+的正式 Phase B 主线仍是 crate 级 spec、模板、oracle tests 和模块化
+`generated-rust-os` 工作区。
+
+两者的详细关系、测试矩阵和 bundle hash 见
+[`docs/v2-rustos-lineage.md`](docs/v2-rustos-lineage.md)。
 
 ## 快速开始
 

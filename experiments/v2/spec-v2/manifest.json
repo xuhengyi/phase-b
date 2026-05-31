@@ -1,0 +1,82 @@
+{
+  "date": "2026-05-09",
+  "prompt_version": "direct-codex-full-base-v1",
+  "model_or_codex": "current Codex session plus codex-cli 0.130.0 redo guardrails",
+  "scope": "full-ch2-ch8-base-riscv-os-redo",
+  "inputs": [
+    "inputs/tgrcore-manifest.json",
+    "inputs/user-tests-manifest.json",
+    "run-manifests/full-ch2-ch8.yaml",
+    "results/tgrcore-full-baseline.md",
+    "spec-v2/architecture/boot-trap-syscall.md",
+    "spec-v2/architecture/app-image-loader.md",
+    "spec-v2/architecture/subsystem-contracts.md"
+  ],
+  "architecture_contracts": {
+    "boot-trap-syscall": "spec-v2/architecture/boot-trap-syscall.md",
+    "app-image-loader": "spec-v2/architecture/app-image-loader.md",
+    "subsystem-contracts": "spec-v2/architecture/subsystem-contracts.md"
+  },
+  "chapters": {
+    "ch2": "spec-v2/chapters/ch2.md",
+    "ch3": "spec-v2/chapters/ch3.md",
+    "ch4": "spec-v2/chapters/ch4.md",
+    "ch5": "spec-v2/chapters/ch5.md",
+    "ch6": "spec-v2/chapters/ch6.md",
+    "ch7": "spec-v2/chapters/ch7.md",
+    "ch8": "spec-v2/chapters/ch8.md"
+  },
+  "inventories": {
+    "ch5": "spec-v2/inventory/ch5.yaml",
+    "ch6": "spec-v2/inventory/ch6.yaml"
+  },
+  "capabilities": {
+    "riscv-os-requirements": "spec-v2/riscv-os-requirements.md",
+    "boot-trap-syscall": "spec-v2/architecture/boot-trap-syscall.md",
+    "app-image-loader": "spec-v2/architecture/app-image-loader.md",
+    "subsystem-contracts": "spec-v2/architecture/subsystem-contracts.md",
+    "chapter-runtime": "spec-v2/capabilities/chapter-runtime.md",
+    "batch-execution": "spec-v2/capabilities/batch-execution.md",
+    "task-switching": "spec-v2/capabilities/task-switching.md",
+    "timer-and-yield": "spec-v2/capabilities/process-control.md",
+    "address-space": "spec-v2/capabilities/address-space.md",
+    "user-buffer": "spec-v2/capabilities/user-buffer.md",
+    "syscall-abi": "spec-v2/capabilities/syscall-abi.md",
+    "process-control": "spec-v2/capabilities/process-control.md",
+    "fork-exec-wait": "spec-v2/capabilities/fork-exec-wait.md",
+    "file-system-io": "spec-v2/capabilities/file-system-io.md",
+    "fd-table": "spec-v2/capabilities/fd-table.md",
+    "ipc-or-pipe": "spec-v2/capabilities/ipc-or-pipe.md",
+    "signal-control": "spec-v2/capabilities/signal-control.md",
+    "thread-control": "spec-v2/capabilities/thread-control.md",
+    "sync-primitives": "spec-v2/capabilities/sync-primitives.md"
+  },
+  "bundles": {
+    "ch2": "bundles/ch2.bundle.md",
+    "ch3": "bundles/ch3.bundle.md",
+    "ch4": "bundles/ch4.bundle.md",
+    "ch5": "bundles/ch5.bundle.md",
+    "ch6": "bundles/ch6.bundle.md",
+    "ch7": "bundles/ch7.bundle.md",
+    "ch8": "bundles/ch8.bundle.md"
+  },
+  "oracles": {
+    "ch2_base": "spec-v2/oracles/ch2-base-output.md",
+    "ch3_base": "spec-v2/oracles/ch3-base-output.md",
+    "ch4_base": "spec-v2/oracles/ch4-base-output.md",
+    "ch5_base": "spec-v2/oracles/ch5-base-output.md",
+    "ch6_base": "spec-v2/oracles/ch6-base-output.md",
+    "ch7_base": "spec-v2/oracles/ch7-base-output.md",
+    "ch8_base": "spec-v2/oracles/ch8-base-output.md"
+  },
+  "status": {
+    "base_scope": "requires_complete_independent_riscv_os_regeneration_from_os_level_architecture_contracts",
+    "exercise_scope": "excluded_from_full_l1_after_tgrcore_baseline_failure_or_timeout",
+    "artifact_gate": "host_runners_minimal_oracle_kernels_embedded_snippet_snapshots_and_single_chapter_demos_invalid_for_step2_step3"
+  },
+  "uncertainty": [
+    "Full base spec now requires complete independent QEMU-backed RISC-V OS artifacts for RustOS/COS generation, including the architecture contracts listed above.",
+    "Exercise groups fail or time out in the frozen tg-rcore snapshot and are not part of the common positive L1 batch.",
+    "Previous host conformance runners are historical negative boundary evidence and cannot satisfy the redo target."
+  ]
+}

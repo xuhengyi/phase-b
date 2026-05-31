@@ -1,0 +1,15 @@
+[package]
+name = "rustos-ch7-full-base"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+[dependencies]
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+lto = "thin"

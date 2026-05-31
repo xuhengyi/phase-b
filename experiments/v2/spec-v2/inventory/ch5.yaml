@@ -1,0 +1,87 @@
+metadata:
+  date: '2026-05-09'
+  prompt_version: direct-codex-smoke-v1
+  model_or_codex: current Codex session; nested codex exec attempts failed and are logged
+  inputs:
+  - inputs/tgrcore-manifest.json
+  - inputs/user-tests-manifest.json
+  - run-manifests/smoke-ch5-ch6.yaml
+  - evidence-maps/tgrcore-crate-map.yaml
+chapter: ch5
+title: process management smoke inventory
+public_surfaces:
+- syscall.write
+- syscall.read
+- syscall.exit
+- syscall.clone
+- syscall.execve
+- syscall.wait4
+- syscall.getpid
+- syscall.sched_yield
+- syscall.clock_gettime
+- syscall.brk
+- syscall.spawn
+- syscall.setpriority
+capabilities:
+  syscall-abi:
+    applies_to: [ch5]
+    surfaces: [write, read, exit, clone, execve, wait4, getpid, sched_yield, clock_gettime, brk, spawn, setpriority]
+  process-control:
+    applies_to: [ch5]
+    surfaces: [exit, clone, execve, wait4, getpid, spawn]
+  fork-exec-wait:
+    applies_to: [ch5]
+    surfaces: [clone, execve, wait4, exit]
+state_objects:
+- process
+- process_id
+- parent_child_relation
+- dead_child_exit_record
+- user_address_space
+- process_context
+- program_break
+- ready_queue
+observable_behaviors:
+- syscall return value
+- child and parent observing different fork return values
+- child exit status visible through wait/waitpid
+- wait reports no child after all children are reaped
+- exec replaces current program image on success
+- sched_yield permits another runnable process to run
+- sbrk returns the old break and changes heap accessibility
+- unsupported or unimplemented syscall exits or returns failure depending on dispatch path
+base_test_evidence:
+- 12forktest
+- 13forktree
+- 14forktest2
+- 15matrix
+- fork_exit
+- forktest_simple
+- sbrk
+exercise_test_evidence:
+- ch5_spawn0
+- ch5_spawn1
+- ch5_setprio
+- ch5_usertest
+evidence:
+  syscall_wrappers:
+  - tg-rcore-tutorial/tg-rcore-tutorial-syscall/src/user.rs:93
+  - tg-rcore-tutorial/tg-rcore-tutorial-syscall/src/user.rs:117
+  - tg-rcore-tutorial/tg-rcore-tutorial-syscall/src/user.rs:123
+  - tg-rcore-tutorial/tg-rcore-tutorial-syscall/src/user.rs:129
+  - tg-rcore-tutorial/tg-rcore-tutorial-syscall/src/user.rs:142
+  - tg-rcore-tutorial/tg-rcore-tutorial-syscall/src/user.rs:154
+  - tg-rcore-tutorial/tg-rcore-tutorial-syscall/src/user.rs:160
+  kernel_dispatch:
+  - tg-rcore-tutorial/tg-rcore-tutorial-syscall/src/kernel/mod.rs:239
+  chapter:
+  - tg-rcore-tutorial/tg-rcore-tutorial-ch5/src/main.rs:223
+  - tg-rcore-tutorial/tg-rcore-tutorial-ch5/src/main.rs:251
+  - tg-rcore-tutorial/tg-rcore-tutorial-ch5/src/main.rs:551
+  - tg-rcore-tutorial/tg-rcore-tutorial-ch5/src/process.rs:60
+  - tg-rcore-tutorial/tg-rcore-tutorial-ch5/src/process.rs:72
+  - tg-rcore-tutorial/tg-rcore-tutorial-task-manage/src/proc_manage.rs:103
+  - tg-rcore-tutorial/tg-rcore-tutorial-task-manage/src/proc_rel.rs:41
+uncertainty:
+- Base process semantics have direct implementation and test evidence.
+- Exercise spawn and priority scheduling are specified by exercise.md and tests, but current ch5 implementation contains TODO return paths for those extension points.

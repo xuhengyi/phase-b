@@ -1,0 +1,90 @@
+metadata:
+  date: '2026-05-09'
+  prompt_version: direct-codex-smoke-v1
+  model_or_codex: current Codex session; nested codex exec attempts failed and are logged
+  inputs:
+  - inputs/tgrcore-manifest.json
+  - inputs/user-tests-manifest.json
+  - run-manifests/smoke-ch5-ch6.yaml
+  - evidence-maps/tgrcore-crate-map.yaml
+chapter: ch6
+title: file system smoke inventory
+public_surfaces:
+- syscall.write
+- syscall.read
+- syscall.openat
+- syscall.close
+- syscall.linkat
+- syscall.unlinkat
+- syscall.fstat
+- syscall.exit
+- syscall.clone
+- syscall.execve
+- syscall.wait4
+- syscall.getpid
+- syscall.brk
+capabilities:
+  syscall-abi:
+    applies_to: [ch6]
+    surfaces: [write, read, openat, close, linkat, unlinkat, fstat, exit, clone, execve, wait4, getpid, brk]
+  file-system-io:
+    applies_to: [ch6]
+    surfaces: [openat, close, read, write, linkat, unlinkat, fstat]
+  fd-table:
+    applies_to: [ch6]
+    surfaces: [openat, close, read, write, clone, execve]
+  process-control:
+    applies_to: [ch6]
+    surfaces: [exit, clone, execve, wait4, getpid, spawn]
+state_objects:
+- process
+- process_id
+- parent_child_relation
+- user_address_space
+- file_descriptor_table
+- file_handle
+- file_offset
+- file_readability
+- file_writability
+- root_directory
+- file_content
+- hard_link_count
+observable_behaviors:
+- open returns a non-negative descriptor for existing or newly created files
+- read copies file bytes into the user buffer and advances the file offset
+- write copies user bytes into a file and advances the file offset
+- close invalidates the descriptor for later operations
+- fork inherits open file descriptors
+- exec preserves the process identity and file descriptor table while replacing program image
+- fstat/link/unlink are exercise extension semantics, not confirmed in the current base implementation
+base_test_evidence:
+- filetest_simple
+- cat_filea
+- inherited ch5 base process tests
+exercise_test_evidence:
+- ch6_file0
+- ch6_file1
+- ch6_file2
+- ch6_file3
+- ch6_usertest
+evidence:
+  syscall_wrappers:
+  - tg-rcore-tutorial/tg-rcore-tutorial-syscall/src/user.rs:13
+  - tg-rcore-tutorial/tg-rcore-tutorial-syscall/src/user.rs:20
+  - tg-rcore-tutorial/tg-rcore-tutorial-syscall/src/user.rs:37
+  - tg-rcore-tutorial/tg-rcore-tutorial-syscall/src/user.rs:50
+  - tg-rcore-tutorial/tg-rcore-tutorial-syscall/src/user.rs:56
+  - tg-rcore-tutorial/tg-rcore-tutorial-syscall/src/user.rs:71
+  - tg-rcore-tutorial/tg-rcore-tutorial-syscall/src/user.rs:84
+  kernel_dispatch:
+  - tg-rcore-tutorial/tg-rcore-tutorial-syscall/src/kernel/mod.rs:239
+  chapter:
+  - tg-rcore-tutorial/tg-rcore-tutorial-ch6/src/main.rs:452
+  - tg-rcore-tutorial/tg-rcore-tutorial-ch6/src/main.rs:538
+  - tg-rcore-tutorial/tg-rcore-tutorial-ch6/src/main.rs:573
+  - tg-rcore-tutorial/tg-rcore-tutorial-ch6/src/fs.rs:45
+  - tg-rcore-tutorial/tg-rcore-tutorial-ch6/src/process.rs:40
+  - tg-rcore-tutorial/tg-rcore-tutorial-easy-fs/src/file.rs:94
+uncertainty:
+- Basic open/read/write/close has direct implementation and test evidence.
+- Hard-link and fstat behavior is specified by exercise.md and tests, but current ch6 implementation contains TODO return paths for those extension points.
